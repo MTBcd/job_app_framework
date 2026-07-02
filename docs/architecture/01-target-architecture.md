@@ -1,5 +1,9 @@
 # Target Architecture (V1 → V3)
 
+> **SUPERSEDED (2026-07-02):** the project pivoted to a bootstrapped solo-founder SaaS.
+> See `03-bootstrap-pivot.md` for the active plan. Kept for reference; the module
+> keep/replace analysis in §1–2 remains largely valid, the platform scope does not.
+
 **Status:** proposal — awaiting founder validation (Step 7). Nothing here is implemented yet.
 **Prime directive:** keep V0's encoded knowledge, replace V0's plumbing, and ship a usable product at every milestone.
 

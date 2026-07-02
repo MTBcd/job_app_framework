@@ -1,5 +1,9 @@
 # Roadmap — independently deployable milestones (Step 6)
 
+> **SUPERSEDED (2026-07-02):** the project pivoted to a bootstrapped solo-founder SaaS.
+> See `03-bootstrap-pivot.md` §3 for the active milestones. M0 (security remediation)
+> remains mandatory and unchanged.
+
 **Rules applied to every milestone:** ships green (lint, mypy on core, tests), deployable on its own, small PRs, no milestone depends on a future one to be useful. Each PR carries: purpose, architecture decision, files, future improvements, risks.
 
 Sequencing logic: security first (hours, not days), then the typed core extraction (it de-risks everything else and is pure porting work), then the platform substrate, then product surface, then intelligence, then scale-out. The V0 CLI keeps working for the founder's own job search until M4 replaces it — we never break the only current user.
