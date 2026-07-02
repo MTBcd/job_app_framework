@@ -1,0 +1,441 @@
+event_at_utc,event_type,weight,company_normalized,domain,email_pattern,email,message_id,source
+2026-04-28T01:56:34+00:00,sent,1.0,allstate canada,gmail.com,provided,mael.boccardi@gmail.com,<b594644c-4613-486f-adf3-5030137e6df2@local.jobapp>,sender
+2026-04-28T01:56:44+00:00,sent,1.0,alpaca,gmail.com,provided,cocojudith.best@gmail.com,<a4d09f65-296c-4487-ac0c-7c376a8d6f96@local.jobapp>,sender
+2026-04-28T01:56:54+00:00,sent,1.0,ams,gmail.com,provided,boccardimael@gmail.com,<acf14b58-a66d-4d97-8731-c2d8b91fe8ce@local.jobapp>,sender
+2026-04-28T01:57:04+00:00,sent,1.0,bank of america,gmail.com,provided,mboccardi71@gmail.com,<fbd02dc6-93c1-43fc-a2c7-ee830cafbcae@local.jobapp>,sender
+2026-04-28T01:57:14+00:00,sent,1.0,bdc,gmail.com,provided,mael.boccardi@gmail.com,<d8ec074d-7fd2-48c1-8bbe-dcc91fc75fde@local.jobapp>,sender
+2026-04-28T01:57:25+00:00,sent,1.0,bdo canada,gmail.com,provided,cocojudith.best@gmail.com,<40dc184b-3b84-4a5d-89c7-5fc3aa797c7f@local.jobapp>,sender
+2026-04-28T01:57:35+00:00,sent,1.0,bdo canada,gmail.com,provided,boccardimael@gmail.com,<49c926db-fdc7-4d49-bf9b-38a6c4306916@local.jobapp>,sender
+2026-04-28T01:57:46+00:00,sent,1.0,bmo,gmail.com,provided,mboccardi71@gmail.com,<d1c13a84-649e-491d-8943-d1442ffeff37@local.jobapp>,sender
+2026-04-28T01:57:56+00:00,sent,1.0,bmo,gmail.com,provided,cocojudith.best@gmail.com,<5028e71e-5348-40d7-aad3-c58c2ff4e426@local.jobapp>,sender
+2026-04-28T02:03:21+00:00,sent,1.0,allstate canada,gmail.com,provided,mael.boccardi@gmail.com,<0062bc1c-1ef6-4def-a1b2-4cc4ae6acdec@local.jobapp>,sender
+2026-04-28T02:03:32+00:00,sent,1.0,alpaca,gmail.com,provided,cocojudith.best@gmail.com,<4c66c501-77c6-4e1a-a089-063dc1706464@local.jobapp>,sender
+2026-04-28T02:03:42+00:00,sent,1.0,ams,gmail.com,provided,boccardimael@gmail.com,<9d165bae-c661-48ec-8500-6f3a22a62d29@local.jobapp>,sender
+2026-04-28T02:03:52+00:00,sent,1.0,bank of america,gmail.com,provided,mboccardi71@gmail.com,<252963f1-9006-4966-b567-ad24e952a1c2@local.jobapp>,sender
+2026-04-28T02:04:03+00:00,sent,1.0,bdc,gmail.com,provided,mael.boccardi@gmail.com,<fb2477a1-2d98-4221-a2c8-ec1455c51810@local.jobapp>,sender
+2026-04-28T02:04:13+00:00,sent,1.0,bdo canada,gmail.com,provided,cocojudith.best@gmail.com,<b664c3b4-b07c-46f9-931c-cff32c699067@local.jobapp>,sender
+2026-04-28T02:04:23+00:00,sent,1.0,bdo canada,gmail.com,provided,boccardimael@gmail.com,<bc6069e5-e302-4ae0-9dd4-9860f7487868@local.jobapp>,sender
+2026-04-28T02:04:33+00:00,sent,1.0,bmo,gmail.com,provided,mboccardi71@gmail.com,<2da92f5d-37da-4bff-9109-43fd5a9f8915@local.jobapp>,sender
+2026-04-28T02:04:43+00:00,sent,1.0,bmo,gmail.com,provided,cocojudith.best@gmail.com,<f5c4532a-c89a-4f6f-9b71-a0c7f1a8f823@local.jobapp>,sender
+2026-04-28T02:04:53+00:00,sent,1.0,rbc,rbc.com,first.last,coraline.best@rbc.com,<01372a9b-5859-4137-a1b2-9665b661c60a@local.jobapp>,sender
+2026-04-28T02:05:03+00:00,sent,1.0,rbc,rbc.com,first.last,coraline.best@rbc.com,<0560de3e-46fe-4358-856e-815398f6775e@local.jobapp>,sender
+2026-04-28T03:22:38+00:00,failed_send,-1.0,allstate canada,gmail.com,provided,mael.boccardi@gmail.com,,sender
+2026-04-28T03:22:38+00:00,failed_send,-1.0,alpaca,gmail.com,provided,cocojudith.best@gmail.com,,sender
+2026-04-28T03:22:38+00:00,failed_send,-1.0,ams,gmail.com,provided,boccardimael@gmail.com,,sender
+2026-04-28T03:22:38+00:00,failed_send,-1.0,bank of america,gmail.com,provided,mboccardi71@gmail.com,,sender
+2026-04-28T03:22:38+00:00,failed_send,-1.0,bdc,gmail.com,provided,mael.boccardi@gmail.com,,sender
+2026-04-28T03:22:38+00:00,failed_send,-1.0,bdo canada,gmail.com,provided,cocojudith.best@gmail.com,,sender
+2026-04-28T03:22:38+00:00,failed_send,-1.0,bdo canada,gmail.com,provided,boccardimael@gmail.com,,sender
+2026-04-28T03:22:39+00:00,failed_send,-1.0,bmo,gmail.com,provided,mboccardi71@gmail.com,,sender
+2026-04-28T03:22:39+00:00,failed_send,-1.0,bmo,gmail.com,provided,cocojudith.best@gmail.com,,sender
+2026-04-28T14:56:21+00:00,failed_send,-1.0,allstate canada,gmail.com,provided,mael.boccardi@gmail.com,,sender
+2026-04-28T14:56:21+00:00,failed_send,-1.0,alpaca,gmail.com,provided,cocojudith.best@gmail.com,,sender
+2026-04-28T14:56:21+00:00,failed_send,-1.0,ams,gmail.com,provided,boccardimael@gmail.com,,sender
+2026-04-28T14:56:21+00:00,failed_send,-1.0,bank of america,gmail.com,provided,mboccardi71@gmail.com,,sender
+2026-04-28T14:56:21+00:00,failed_send,-1.0,bdc,gmail.com,provided,mael.boccardi@gmail.com,,sender
+2026-04-28T14:56:21+00:00,failed_send,-1.0,bdo canada,gmail.com,provided,cocojudith.best@gmail.com,,sender
+2026-04-28T14:56:21+00:00,failed_send,-1.0,bdo canada,gmail.com,provided,boccardimael@gmail.com,,sender
+2026-04-28T14:56:21+00:00,failed_send,-1.0,bmo,gmail.com,provided,mboccardi71@gmail.com,,sender
+2026-04-28T14:56:22+00:00,failed_send,-1.0,bmo,gmail.com,provided,cocojudith.best@gmail.com,,sender
+2026-04-28T14:57:06+00:00,failed_send,-1.0,allstate canada,gmail.com,provided,mael.boccardi@gmail.com,,sender
+2026-04-28T14:57:06+00:00,failed_send,-1.0,alpaca,gmail.com,provided,cocojudith.best@gmail.com,,sender
+2026-04-28T14:57:06+00:00,failed_send,-1.0,ams,gmail.com,provided,boccardimael@gmail.com,,sender
+2026-04-28T14:57:06+00:00,failed_send,-1.0,bank of america,gmail.com,provided,mboccardi71@gmail.com,,sender
+2026-04-28T14:57:06+00:00,failed_send,-1.0,bdc,gmail.com,provided,mael.boccardi@gmail.com,,sender
+2026-04-28T14:57:06+00:00,failed_send,-1.0,bdo canada,gmail.com,provided,cocojudith.best@gmail.com,,sender
+2026-04-28T14:57:06+00:00,failed_send,-1.0,bdo canada,gmail.com,provided,boccardimael@gmail.com,,sender
+2026-04-28T14:57:06+00:00,failed_send,-1.0,bmo,gmail.com,provided,mboccardi71@gmail.com,,sender
+2026-04-28T14:57:06+00:00,failed_send,-1.0,bmo,gmail.com,provided,cocojudith.best@gmail.com,,sender
+2026-04-28T14:58:49+00:00,sent,1.0,allstate canada,gmail.com,provided,mael.boccardi@gmail.com,<a4319a17-a044-422b-9d72-9aa12e327243@local.jobapp>,sender
+2026-04-28T14:59:00+00:00,sent,1.0,alpaca,gmail.com,provided,cocojudith.best@gmail.com,<6a3c6c7d-36a7-4f9c-bc0e-cc5b8394fc70@local.jobapp>,sender
+2026-04-28T14:59:11+00:00,sent,1.0,ams,gmail.com,provided,boccardimael@gmail.com,<f3696c55-ae3a-491b-a0b7-5185a1da549b@local.jobapp>,sender
+2026-04-28T14:59:21+00:00,sent,1.0,bank of america,gmail.com,provided,mboccardi71@gmail.com,<1e5d4d28-723b-4ec6-ba6a-36838f2f48c4@local.jobapp>,sender
+2026-04-28T14:59:32+00:00,sent,1.0,bdc,gmail.com,provided,mael.boccardi@gmail.com,<1f6e9808-f678-446c-b86b-eaedfcda44df@local.jobapp>,sender
+2026-04-28T14:59:42+00:00,sent,1.0,bdo canada,gmail.com,provided,cocojudith.best@gmail.com,<91390c3f-c1d5-4e78-baa7-5bf65e267224@local.jobapp>,sender
+2026-04-28T14:59:53+00:00,sent,1.0,bdo canada,gmail.com,provided,boccardimael@gmail.com,<763c5234-9630-46d2-a4df-ed987fc2c7eb@local.jobapp>,sender
+2026-04-28T15:00:04+00:00,sent,1.0,bmo,gmail.com,provided,mboccardi71@gmail.com,<8f5f843a-79bd-4e09-85f8-cdf31f746268@local.jobapp>,sender
+2026-04-28T15:00:15+00:00,sent,1.0,bmo,gmail.com,provided,cocojudith.best@gmail.com,<e0ab65f4-f105-4e02-ae13-50107b8d22a9@local.jobapp>,sender
+2026-04-28T15:43:58+00:00,sent,1.0,allstate canada,gmail.com,provided,mael.boccardi@gmail.com,<0e370c5d-d4b7-4246-b86a-e6bd80fef3e7@local.jobapp>,sender
+2026-04-28T15:44:08+00:00,sent,1.0,alpaca,gmail.com,provided,cocojudith.best@gmail.com,<8db73774-ea8c-4108-a7b2-05368ca4e8a2@local.jobapp>,sender
+2026-04-28T15:44:20+00:00,sent,1.0,ams,gmail.com,provided,boccardimael@gmail.com,<23f6e377-0874-49bc-8d27-076653fad7ed@local.jobapp>,sender
+2026-04-28T15:44:30+00:00,sent,1.0,bank of america,gmail.com,provided,mboccardi71@gmail.com,<a92aaf49-7496-430a-abdf-796d7c7cc212@local.jobapp>,sender
+2026-04-28T15:44:40+00:00,sent,1.0,bdc,gmail.com,provided,mael.boccardi@gmail.com,<db5c1456-d5ab-488d-8167-1240b48e21f3@local.jobapp>,sender
+2026-04-28T15:44:51+00:00,sent,1.0,bdo canada,gmail.com,provided,cocojudith.best@gmail.com,<5e8ae533-dbe6-4ed7-989f-14bbf5056581@local.jobapp>,sender
+2026-04-28T15:45:03+00:00,sent,1.0,bdo canada,gmail.com,provided,boccardimael@gmail.com,<be784556-cac9-4772-a212-27112f4bdb44@local.jobapp>,sender
+2026-04-28T15:45:13+00:00,sent,1.0,bmo,gmail.com,provided,mboccardi71@gmail.com,<416ba89e-3da3-4f42-80dd-92e2ffca988c@local.jobapp>,sender
+2026-04-28T15:45:24+00:00,sent,1.0,bmo,gmail.com,provided,cocojudith.best@gmail.com,<151aa6fb-3430-4414-b7d7-9c0e390df7bd@local.jobapp>,sender
+2026-04-28T16:29:30+00:00,sent,1.0,allstate canada,gmail.com,provided,mael.boccardi@gmail.com,<44c77a50-bad7-4632-8afe-e82f19cdba8a@local.jobapp>,sender
+2026-04-28T16:29:40+00:00,sent,1.0,alpaca,gmail.com,provided,cocojudith.best@gmail.com,<4f7bfaa6-4979-499e-beea-5f8f5ce17b62@local.jobapp>,sender
+2026-04-28T16:29:51+00:00,sent,1.0,ams,gmail.com,provided,boccardimael@gmail.com,<f6d8c8cc-c2ef-485e-b3aa-6c6187afb608@local.jobapp>,sender
+2026-04-28T16:30:02+00:00,sent,1.0,bank of america,gmail.com,provided,mboccardi71@gmail.com,<994854a3-2a3f-4072-891f-846d328b2c1a@local.jobapp>,sender
+2026-04-28T16:30:12+00:00,sent,1.0,bdc,gmail.com,provided,mael.boccardi@gmail.com,<2a1d05f9-985a-41f3-b40e-de2aa86d24e4@local.jobapp>,sender
+2026-04-28T16:30:23+00:00,sent,1.0,bdo canada,gmail.com,provided,cocojudith.best@gmail.com,<07bd7995-a99f-47bc-9061-db628f17d7a7@local.jobapp>,sender
+2026-04-28T16:30:34+00:00,sent,1.0,bdo canada,gmail.com,provided,boccardimael@gmail.com,<83b069f0-8eab-41c1-9cdf-5b2b05df26bd@local.jobapp>,sender
+2026-04-28T16:30:44+00:00,sent,1.0,bmo,gmail.com,provided,mboccardi71@gmail.com,<81ba6a65-078c-4f8a-a9ae-205c724ec76b@local.jobapp>,sender
+2026-04-28T16:30:55+00:00,sent,1.0,bmo,gmail.com,provided,cocojudith.best@gmail.com,<8d01a8ff-d61a-4582-a148-f6bac305c2af@local.jobapp>,sender
+2026-04-29T04:57:13+00:00,sent,1.0,morgan stanley,morganstanley.com,first.last,jesse.lee@morganstanley.com,<f2ee61fe-f531-49ac-bc7c-fc3a63c3fc22@local.jobapp>,sender
+2026-04-29T04:57:23+00:00,sent,1.0,morgan stanley,morganstanley.com,first.last,nero.wei@morganstanley.com,<6992605f-6b2e-44fd-af32-00b089fad186@local.jobapp>,sender
+2026-04-29T04:57:34+00:00,sent,1.0,morgan stanley,morganstanley.com,first.last,conrad.coleman@morganstanley.com,<9d62bcd3-c6ec-4e47-9dbe-8d003a63a637@local.jobapp>,sender
+2026-04-29T04:57:44+00:00,sent,1.0,balyasny asset management,bamfunds.com,flast,atayal@bamfunds.com,<8bb8da68-8130-4112-abdf-a2b9d887a2a9@local.jobapp>,sender
+2026-04-29T04:57:55+00:00,sent,1.0,morgan stanley,morganstanley.com,first.last,jo.zhou@morganstanley.com,<d60a6cf7-caef-4edf-858f-6dc64b37172b@local.jobapp>,sender
+2026-04-29T15:05:53+00:00,sent,1.0,bank of america merrill lynch,bofa.com,first.last,vikki.wang@bofa.com,<99b96e4e-cf80-4cde-ad13-e71788a9a1ad@local.jobapp>,sender
+2026-04-29T15:05:58+00:00,sent,1.0,morgan stanley,morganstanley.com,first.last,miaoshiqi.liu@morganstanley.com,<bfd4443b-eeab-4b5d-a61f-9c12ddee756c@local.jobapp>,sender
+2026-04-29T15:06:03+00:00,sent,1.0,jpmorgan chase and,jpmorgan.com,first.last,vishaal.shivaramakrishnan@jpmorgan.com,<858ab56d-2492-4bc6-a9a6-b62af84795a9@local.jobapp>,sender
+2026-04-29T15:06:08+00:00,sent,1.0,balyasny asset management,bamfunds.com,first.last,tian.lezhao@bamfunds.com,<c89d4f9e-8db2-4b8c-9678-1803074887ac@local.jobapp>,sender
+2026-04-29T15:06:13+00:00,sent,1.0,bank of america merrill lynch,bofa.com,first.last,farzaneh.rahmdel@bofa.com,<1963c7a1-ab56-4657-aba3-26f15fa40712@local.jobapp>,sender
+2026-04-29T15:06:17+00:00,sent,1.0,bank of america,bofa.com,first.last,surbhi.garg@bofa.com,<19fc3ef5-5bac-4dbc-8efa-2041aa1df17d@local.jobapp>,sender
+2026-04-29T15:06:24+00:00,sent,1.0,morgan stanley,morganstanley.com,first.last,aleks.vagners@morganstanley.com,<028404e1-4fd7-420c-ac86-243c2b683b94@local.jobapp>,sender
+2026-04-29T15:06:29+00:00,sent,1.0,jpmorgan chase and,jpmorgan.com,first.last,david.xu@jpmorgan.com,<ad0cb50b-3ee6-4427-ac8e-0a652811e8a1@local.jobapp>,sender
+2026-04-29T15:06:34+00:00,sent,1.0,blackrock,blackrock.com,first.last,victor.mingxu@blackrock.com,<8f98319d-3f57-4673-a0d4-313a0d25e5e7@local.jobapp>,sender
+2026-04-29T15:06:41+00:00,sent,1.0,jpmorgan chase and,jpmorgan.com,first.last,harinath.gunenthiran@jpmorgan.com,<ee6fb735-c36f-4c25-9ac6-3fe317683faf@local.jobapp>,sender
+2026-04-29T15:06:46+00:00,sent,1.0,morgan stanley,morganstanley.com,first.last,tong.lin@morganstanley.com,<f921f647-7076-446d-94ce-1786cdfcdc6a@local.jobapp>,sender
+2026-04-29T15:06:51+00:00,sent,1.0,blackrock,blackrock.com,first.last,lawrence.hwang@blackrock.com,<b3e39fc7-d7d4-4e05-8799-322479ad2e4a@local.jobapp>,sender
+2026-04-29T15:06:56+00:00,sent,1.0,bank of america merrill lynch,bofa.com,first.last,ian.matonse@bofa.com,<48cbfb5f-b93d-4d73-9616-9e3cbd5ef5d7@local.jobapp>,sender
+2026-04-29T15:07:01+00:00,sent,1.0,morgan stanley,morganstanley.com,first.last,david.jarvis@morganstanley.com,<7f3b6122-b51e-4ff2-9285-852c320acdaa@local.jobapp>,sender
+2026-04-29T15:07:06+00:00,sent,1.0,bank of america,bofa.com,first.last,chuan.tu@bofa.com,<0b7224be-1b59-41e5-97f0-9542a07e9ba0@local.jobapp>,sender
+2026-04-29T15:07:11+00:00,sent,1.0,jpmorgan chase and,jpmorgan.com,first.last,rohan.woli@jpmorgan.com,<9f46f096-b4cd-4287-8c4d-757a7a0aaa2a@local.jobapp>,sender
+2026-04-29T15:07:15+00:00,sent,1.0,bank of america,bofa.com,first.last,anushka.muresh@bofa.com,<7b32e547-fab9-42a7-a25d-e29f03231248@local.jobapp>,sender
+2026-04-29T15:07:21+00:00,sent,1.0,bank of america,bofa.com,first.last,nadia.lasri@bofa.com,<6fc538d1-6dca-438d-8a3d-e9b6d6c5216d@local.jobapp>,sender
+2026-04-29T15:07:25+00:00,sent,1.0,morgan stanley,morganstanley.com,first.last,rihab.rubaiyat@morganstanley.com,<5fda618b-8cfc-45bb-b202-60ab011a6306@local.jobapp>,sender
+2026-04-29T15:07:30+00:00,sent,1.0,jpmorgan chase and,jpmorgan.com,first.last,vanessa.campbell@jpmorgan.com,<39f55323-ebba-47fb-b115-4f63f2d88986@local.jobapp>,sender
+2026-04-29T17:51:34+00:00,hard_bounce,-3.0,morgan stanley,morganstanley.com,first.last,miaoshiqi.liu@morganstanley.com,<bfd4443b-eeab-4b5d-a61f-9c12ddee756c@local.jobapp>,bounce_parser
+2026-04-29T17:51:34+00:00,hard_bounce,-3.0,balyasny asset management,bamfunds.com,first.last,tian.lezhao@bamfunds.com,<c89d4f9e-8db2-4b8c-9678-1803074887ac@local.jobapp>,bounce_parser
+2026-04-29T17:51:34+00:00,hard_bounce,-3.0,bank of america,bofa.com,first.last,surbhi.garg@bofa.com,<19fc3ef5-5bac-4dbc-8efa-2041aa1df17d@local.jobapp>,bounce_parser
+2026-04-29T17:51:34+00:00,hard_bounce,-3.0,blackrock,blackrock.com,first.last,victor.mingxu@blackrock.com,<8f98319d-3f57-4673-a0d4-313a0d25e5e7@local.jobapp>,bounce_parser
+2026-04-29T17:51:35+00:00,hard_bounce,-3.0,bank of america,bofa.com,first.last,nadia.lasri@bofa.com,<6fc538d1-6dca-438d-8a3d-e9b6d6c5216d@local.jobapp>,bounce_parser
+2026-04-30T16:05:20+00:00,failed_send,-1.0,balyasny asset management,bamfunds.com,flast,tlezhao@bamfunds.com,,sender
+2026-04-30T16:05:23+00:00,failed_send,-1.0,blackrock,blackrock.com,first.last,jad.elamrani@blackrock.com,,sender
+2026-04-30T16:05:27+00:00,failed_send,-1.0,dv trading,dvtrading.ca,first.last,justin.n@dvtrading.ca,,sender
+2026-04-30T16:05:31+00:00,failed_send,-1.0,bank of america merrill lynch,bofa.com,first.last,kelvin.zhang@bofa.com,,sender
+2026-04-30T16:05:34+00:00,failed_send,-1.0,citi,citi.com,first.last,derek.smith@citi.com,,sender
+2026-04-30T16:05:38+00:00,failed_send,-1.0,cubist systematic strategies,systematic-strategies.com,first.last,junfei.geng@systematic-strategies.com,,sender
+2026-04-30T16:05:42+00:00,failed_send,-1.0,jefferies,jefferies.com,first.last,alex.bauer@jefferies.com,,sender
+2026-04-30T16:05:46+00:00,failed_send,-1.0,barclays,barclays.com,first.last,yash.r@barclays.com,,sender
+2026-04-30T16:05:49+00:00,failed_send,-1.0,citibank,citi.com,first.last,jinghai.zhao@citi.com,,sender
+2026-04-30T16:05:53+00:00,failed_send,-1.0,citi,citi.com,first.last,madeline.k@citi.com,,sender
+2026-04-30T16:05:56+00:00,failed_send,-1.0,citi,citi.com,first.last,yixuan.j@citi.com,,sender
+2026-04-30T16:05:59+00:00,failed_send,-1.0,citi,citi.com,first.last,alexander.achcar@citi.com,,sender
+2026-04-30T16:06:02+00:00,failed_send,-1.0,citi,citi.com,first.last,manxi.yuan@citi.com,,sender
+2026-04-30T16:06:06+00:00,failed_send,-1.0,citi,citi.com,first.last,peter.sum@citi.com,,sender
+2026-04-30T16:06:10+00:00,failed_send,-1.0,citi,citi.com,first.last,yuhang.zhang@citi.com,,sender
+2026-04-30T16:06:13+00:00,failed_send,-1.0,citi,citi.com,first.last,vidhi.khatri@citi.com,,sender
+2026-04-30T16:06:16+00:00,failed_send,-1.0,citi,citi.com,first.last,sahibjeet.singh@citi.com,,sender
+2026-04-30T16:06:20+00:00,failed_send,-1.0,citi,citi.com,first.last,sanya.kapur@citi.com,,sender
+2026-04-30T16:06:26+00:00,failed_send,-1.0,citi,citi.com,first.last,sherry.innocent@citi.com,,sender
+2026-04-30T16:06:29+00:00,failed_send,-1.0,citi,citi.com,first.last,anurag.jagota@citi.com,,sender
+2026-04-30T16:06:33+00:00,failed_send,-1.0,citi,citi.com,first.last,zhou.ximeng@citi.com,,sender
+2026-04-30T16:06:38+00:00,failed_send,-1.0,citi,citi.com,first.last,cesar.lahoud@citi.com,,sender
+2026-04-30T16:06:43+00:00,failed_send,-1.0,citi,citi.com,first.last,ben.wang@citi.com,,sender
+2026-04-30T16:06:47+00:00,failed_send,-1.0,citi,citi.com,first.last,aman.jaswal@citi.com,,sender
+2026-04-30T16:06:50+00:00,failed_send,-1.0,citi,citi.com,first.last,amanpreet.singh@citi.com,,sender
+2026-04-30T16:06:53+00:00,failed_send,-1.0,citi,citi.com,first.last,helen.lu@citi.com,,sender
+2026-04-30T16:06:57+00:00,failed_send,-1.0,goldman sachs,gs.com,first.last,david.g@gs.com,,sender
+2026-04-30T16:07:00+00:00,failed_send,-1.0,jefferies,jefferies.com,first.last,john.aiken@jefferies.com,,sender
+2026-04-30T16:07:04+00:00,failed_send,-1.0,jefferies,jefferies.com,first.last,raghav.agarwal@jefferies.com,,sender
+2026-04-30T16:07:08+00:00,failed_send,-1.0,jpmorgan chase private bank,jpmorgan.com,first.last,raj.kohli@jpmorgan.com,,sender
+2026-04-30T16:07:11+00:00,failed_send,-1.0,morgan stanley,morganstanley.com,first.last,richa.p@morganstanley.com,,sender
+2026-04-30T16:07:14+00:00,failed_send,-1.0,morgan stanley,morganstanley.com,first.last,mallory.kropf@morganstanley.com,,sender
+2026-04-30T16:07:17+00:00,failed_send,-1.0,rbc capital markets,rbccm.com,first.last,cathy.yu@rbccm.com,,sender
+2026-04-30T16:07:20+00:00,failed_send,-1.0,rbc capital markets,rbccm.com,first.last,yuwei.chen@rbccm.com,,sender
+2026-04-30T16:07:24+00:00,failed_send,-1.0,rbc capital markets,rbccm.com,first.last,razvan.llie@rbccm.com,,sender
+2026-04-30T16:07:27+00:00,failed_send,-1.0,rbc capital markets,rbccm.com,first.last,johnny.meng@rbccm.com,,sender
+2026-04-30T16:07:31+00:00,failed_send,-1.0,bmo capital markets,bmo.com,first.last,rahul.jaideep@bmo.com,,sender
+2026-04-30T16:07:34+00:00,failed_send,-1.0,bmo capital markets,bmo.com,first.last,sigitas.keras@bmo.com,,sender
+2026-04-30T16:07:37+00:00,failed_send,-1.0,bmo capital markets,bmo.com,first.last,sam.senko@bmo.com,,sender
+2026-04-30T16:07:40+00:00,failed_send,-1.0,bmo capital markets,bmo.com,first.last,maggie.huang@bmo.com,,sender
+2026-04-30T16:07:43+00:00,failed_send,-1.0,bmo capital markets,bmo.com,first.last,david.cheng@bmo.com,,sender
+2026-04-30T16:07:46+00:00,failed_send,-1.0,rbc capital markets,rbccm.com,first.last,hairui.xu@rbccm.com,,sender
+2026-04-30T16:07:49+00:00,soft_bounce,-0.75,rbc capital markets,rbccm.com,first.last,anyi.zhu@rbccm.com,,sender
+2026-04-30T16:07:51+00:00,failed_send,-1.0,rbc capital markets,rbccm.com,first.last,fei.meng@rbccm.com,,sender
+2026-04-30T16:07:53+00:00,failed_send,-1.0,rbc capital markets,rbccm.com,first.last,kevin.huang@rbccm.com,,sender
+2026-04-30T16:07:55+00:00,failed_send,-1.0,rbc capital markets,rbccm.com,first.last,mike.chou@rbccm.com,,sender
+2026-04-30T16:07:57+00:00,failed_send,-1.0,rbc capital markets,rbccm.com,first.last,tian.you@rbccm.com,,sender
+2026-04-30T16:07:59+00:00,failed_send,-1.0,rbc capital markets,rbccm.com,first.last,yizhi.li@rbccm.com,,sender
+2026-04-30T16:08:01+00:00,failed_send,-1.0,rbc capital markets,rbccm.com,first.last,carol.l@rbccm.com,,sender
+2026-04-30T16:08:03+00:00,failed_send,-1.0,scotiabank,scotiabank.com,first.last,hamed.layeghi@scotiabank.com,,sender
+2026-04-30T16:08:05+00:00,failed_send,-1.0,scotiabank,scotiabank.com,first.last,andrew.marmash@scotiabank.com,,sender
+2026-04-30T16:08:07+00:00,failed_send,-1.0,scotiabank,scotiabank.com,first.last,david.he@scotiabank.com,,sender
+2026-04-30T16:08:10+00:00,failed_send,-1.0,scotiabank,scotiabank.com,first.last,raymond.wang@scotiabank.com,,sender
+2026-04-30T16:08:12+00:00,failed_send,-1.0,scotiabank,scotiabank.com,first.last,liming.yang@scotiabank.com,,sender
+2026-04-30T16:08:14+00:00,failed_send,-1.0,state street,statestreet.com,first.last,victor.z@statestreet.com,,sender
+2026-04-30T16:08:16+00:00,failed_send,-1.0,td securities,tdsecurities.com,first.last,ryan.ferguson@tdsecurities.com,,sender
+2026-04-30T16:08:18+00:00,failed_send,-1.0,td securities,tdsecurities.com,first.last,tianyu.luo@tdsecurities.com,,sender
+2026-04-30T16:08:21+00:00,failed_send,-1.0,td securities,tdsecurities.com,first.last,tongfei.zhou@tdsecurities.com,,sender
+2026-04-30T16:08:23+00:00,failed_send,-1.0,td securities,tdsecurities.com,first.last,victor.xu@tdsecurities.com,,sender
+2026-04-30T16:08:25+00:00,failed_send,-1.0,td securities,tdsecurities.com,first.last,zhivuan.zhou@tdsecurities.com,,sender
+2026-04-30T16:08:27+00:00,failed_send,-1.0,td securities,tdsecurities.com,first.last,amber.qian@tdsecurities.com,,sender
+2026-04-30T16:08:30+00:00,failed_send,-1.0,td securities,tdsecurities.com,first.last,matthew.dempsey@tdsecurities.com,,sender
+2026-04-30T16:08:34+00:00,failed_send,-1.0,td securities,tdsecurities.com,first.last,yijia.wen@tdsecurities.com,,sender
+2026-04-30T16:08:37+00:00,failed_send,-1.0,td securities,tdsecurities.com,first.last,yiru.x@tdsecurities.com,,sender
+2026-04-30T16:08:39+00:00,failed_send,-1.0,bmo capital markets,bmo.com,first.last,shanda.feng@bmo.com,,sender
+2026-04-30T16:08:42+00:00,failed_send,-1.0,bmo capital markets,bmo.com,first.last,hamed.rasouli@bmo.com,,sender
+2026-04-30T16:08:44+00:00,failed_send,-1.0,rbc capital markets,rbccm.com,first.last,percy.zhao@rbccm.com,,sender
+2026-04-30T16:08:46+00:00,failed_send,-1.0,rbc capital markets,rbccm.com,first.last,johnson.chen@rbccm.com,,sender
+2026-04-30T16:08:48+00:00,failed_send,-1.0,rbc capital markets,rbccm.com,first.last,aj.choudhry@rbccm.com,,sender
+2026-04-30T16:08:50+00:00,failed_send,-1.0,rbc capital markets,rbccm.com,first.last,javden.zhao@rbccm.com,,sender
+2026-04-30T16:08:52+00:00,failed_send,-1.0,rbc capital markets,rbccm.com,first.last,guanai.p@rbccm.com,,sender
+2026-04-30T16:08:55+00:00,failed_send,-1.0,rbc capital markets,rbccm.com,first.last,sadia.billoo@rbccm.com,,sender
+2026-04-30T16:08:57+00:00,failed_send,-1.0,rbc capital markets,rbccm.com,first.last,eric.w@rbccm.com,,sender
+2026-04-30T16:08:59+00:00,failed_send,-1.0,rbc capital markets,rbccm.com,first.last,charlie.chen@rbccm.com,,sender
+2026-04-30T16:09:01+00:00,failed_send,-1.0,scotiabank,scotiabank.com,first.last,hao.luo@scotiabank.com,,sender
+2026-04-30T16:09:03+00:00,failed_send,-1.0,scotiabank,scotiabank.com,first.last,connor.drew@scotiabank.com,,sender
+2026-04-30T16:09:05+00:00,failed_send,-1.0,scotiabank,scotiabank.com,first.last,xue.jin@scotiabank.com,,sender
+2026-04-30T16:09:07+00:00,failed_send,-1.0,scotiabank,scotiabank.com,first.last,yu.fu@scotiabank.com,,sender
+2026-04-30T16:09:10+00:00,failed_send,-1.0,scotiabank,scotiabank.com,first.last,ben.liu@scotiabank.com,,sender
+2026-04-30T16:09:11+00:00,failed_send,-1.0,scotiabank,scotiabank.com,first.last,wellen.g@scotiabank.com,,sender
+2026-04-30T16:09:13+00:00,failed_send,-1.0,state street,statestreet.com,first.last,sadou.diallo@statestreet.com,,sender
+2026-04-30T16:09:15+00:00,failed_send,-1.0,state street,statestreet.com,first.last,gianfranco.bino@statestreet.com,,sender
+2026-04-30T16:09:17+00:00,failed_send,-1.0,ubs,ubs.com,first.last,tunan.jia@ubs.com,,sender
+2026-04-30T16:09:19+00:00,failed_send,-1.0,omers,omers.com,first.last,robert.grzesiuk@omers.com,,sender
+2026-04-30T16:09:21+00:00,failed_send,-1.0,ontario teachers pension plan,otpp.com,first.last,peiliang.guo@otpp.com,,sender
+2026-04-30T16:09:23+00:00,failed_send,-1.0,ontario teachers pension plan,otpp.com,first.last,justin.chan@otpp.com,,sender
+2026-04-30T16:09:25+00:00,failed_send,-1.0,blackrock,blackrock.com,first.last,david.vestergaard@blackrock.com,,sender
+2026-04-30T16:09:27+00:00,failed_send,-1.0,connor clark lunn,cclgroup.com,first.last,carl.y@cclgroup.com,,sender
+2026-04-30T16:09:29+00:00,failed_send,-1.0,connor clark lunn investment management,cclgroup.com,first.last,matthew.mamelak@cclgroup.com,,sender
+2026-04-30T16:09:31+00:00,failed_send,-1.0,connor clark lunn investment management,cclgroup.com,first.last,vedant.shah@cclgroup.com,,sender
+2026-04-30T16:09:34+00:00,failed_send,-1.0,cpp investments,cppib.com,first.last,marko.misic@cppib.com,,sender
+2026-04-30T16:09:35+00:00,failed_send,-1.0,fidelity investments,fidelity.com,first.last,zhuoran.l@fidelity.com,,sender
+2026-04-30T16:09:37+00:00,failed_send,-1.0,hillsdale,hillsdaleinv.com,first.last,chen.x@hillsdaleinv.com,,sender
+2026-04-30T16:09:39+00:00,failed_send,-1.0,hillsdale investment management,hillsdaleinv.com,first.last,leah.wu@hillsdaleinv.com,,sender
+2026-04-30T16:09:42+00:00,failed_send,-1.0,hillsdale investment management,hillsdaleinv.com,first.last,udit.grover@hillsdaleinv.com,,sender
+2026-04-30T16:09:43+00:00,failed_send,-1.0,hillsdale investment management,hillsdaleinv.com,first.last,brandon.greer@hillsdaleinv.com,,sender
+2026-04-30T16:09:45+00:00,failed_send,-1.0,hillsdale investment management,hillsdaleinv.com,first.last,samuel.appasamy@hillsdaleinv.com,,sender
+2026-04-30T16:09:47+00:00,failed_send,-1.0,hillsdale investment management,hillsdaleinv.com,first.last,fangjin.lin@hillsdaleinv.com,,sender
+2026-04-30T16:09:49+00:00,failed_send,-1.0,mawer investment management,mawer.com,first.last,mario.he@mawer.com,,sender
+2026-04-30T16:09:51+00:00,failed_send,-1.0,omers,omers.com,first.last,bona.z@omers.com,,sender
+2026-04-30T16:09:53+00:00,failed_send,-1.0,omers,omers.com,first.last,angela.zhao@omers.com,,sender
+2026-04-30T16:09:55+00:00,failed_send,-1.0,ontario teachers pension plan,otpp.com,first.last,ting.wang@otpp.com,,sender
+2026-04-30T16:09:57+00:00,failed_send,-1.0,brookfield asset management,brookfield.com,first.last,prashant.keswani@brookfield.com,,sender
+2026-04-30T16:09:59+00:00,failed_send,-1.0,brookfield asset management,brookfield.com,first.last,hasan.syed@brookfield.com,,sender
+2026-04-30T16:10:01+00:00,failed_send,-1.0,brookfield asset management,brookfield.com,first.last,carter.mcmaster@brookfield.com,,sender
+2026-04-30T16:10:03+00:00,failed_send,-1.0,brookfield asset management,brookfield.com,first.last,paul.moylan@brookfield.com,,sender
+2026-04-30T16:10:05+00:00,failed_send,-1.0,brookfield asset management,brookfield.com,first.last,kiera.morton@brookfield.com,,sender
+2026-04-30T16:10:07+00:00,failed_send,-1.0,brookfield asset management,brookfield.com,first.last,ryan.turnbull@brookfield.com,,sender
+2026-04-30T16:10:11+00:00,failed_send,-1.0,brookfield asset management,brookfield.com,first.last,anish.jain@brookfield.com,,sender
+2026-04-30T16:10:15+00:00,failed_send,-1.0,brookfield asset management,brookfield.com,first.last,mitchell.ho@brookfield.com,,sender
+2026-04-30T16:10:18+00:00,failed_send,-1.0,brookfield asset management,brookfield.com,first.last,hajar.bouchebti@brookfield.com,,sender
+2026-04-30T16:10:21+00:00,failed_send,-1.0,brookfield asset management,brookfield.com,first.last,howard.c@brookfield.com,,sender
+2026-04-30T16:10:25+00:00,failed_send,-1.0,brookfield asset management,brookfield.com,first.last,arun.thomas@brookfield.com,,sender
+2026-04-30T16:10:28+00:00,failed_send,-1.0,cpp investments,cppib.com,first.last,shiqi.liu@cppib.com,,sender
+2026-04-30T16:10:31+00:00,failed_send,-1.0,cpp investments,cppib.com,first.last,liam.wu@cppib.com,,sender
+2026-04-30T16:10:35+00:00,failed_send,-1.0,cpp investments,cppib.com,first.last,steven.s@cppib.com,,sender
+2026-04-30T16:10:38+00:00,failed_send,-1.0,ehp funds,ehpfunds.com,first.last,ovidiu.sandu@ehpfunds.com,,sender
+2026-04-30T16:10:42+00:00,failed_send,-1.0,hillsdale investment management,hillsdaleinv.com,first.last,haosheng.li@hillsdaleinv.com,,sender
+2026-04-30T16:10:45+00:00,failed_send,-1.0,hillsdale investment management,hillsdaleinv.com,first.last,anthony.binda@hillsdaleinv.com,,sender
+2026-04-30T16:10:48+00:00,failed_send,-1.0,omers,omers.com,first.last,xinyao.qian@omers.com,,sender
+2026-04-30T16:10:51+00:00,failed_send,-1.0,omers,omers.com,first.last,monica.peng@omers.com,,sender
+2026-04-30T16:10:55+00:00,failed_send,-1.0,omers,omers.com,first.last,sigi.jia@omers.com,,sender
+2026-04-30T16:10:59+00:00,failed_send,-1.0,omers capital markets,omers.com,first.last,michael.williamson@omers.com,,sender
+2026-04-30T16:11:03+00:00,failed_send,-1.0,omers capital markets,omers.com,first.last,mehdi.karoui@omers.com,,sender
+2026-04-30T16:11:06+00:00,failed_send,-1.0,ontario teachers pension plan,otpp.com,first.last,utsav.shinghal@otpp.com,,sender
+2026-04-30T16:11:10+00:00,failed_send,-1.0,ontario teachers pension plan,otpp.com,first.last,peter.lizon@otpp.com,,sender
+2026-04-30T16:11:13+00:00,failed_send,-1.0,ontario teachers pension plan,otpp.com,first.last,peggie.fan@otpp.com,,sender
+2026-04-30T16:11:17+00:00,failed_send,-1.0,picton mahoney asset management,pictonmahoney.com,first.last,kristian.bauer@pictonmahoney.com,,sender
+2026-04-30T16:11:19+00:00,failed_send,-1.0,canada guaranty,canadaguaranty.ca,first.last,michael.sawvers@canadaguaranty.ca,,sender
+2026-04-30T16:11:21+00:00,failed_send,-1.0,canada guaranty,canadaguaranty.ca,first.last,ruihong.jiang@canadaguaranty.ca,,sender
+2026-04-30T16:11:24+00:00,failed_send,-1.0,ci global asset management,ci.com,first.last,justin.l@ci.com,,sender
+2026-04-30T16:11:26+00:00,failed_send,-1.0,manulife,manulife.com,first.last,han.zhang@manulife.com,,sender
+2026-04-30T16:11:28+00:00,failed_send,-1.0,manulife financial,manulife.com,first.last,ke.chen@manulife.com,,sender
+2026-04-30T16:11:30+00:00,failed_send,-1.0,manulife financial,manulife.com,first.last,anton.tenyakov@manulife.com,,sender
+2026-04-30T16:11:32+00:00,failed_send,-1.0,rbc global asset management,rbc.com,first.last,mariam.belkoura@rbc.com,,sender
+2026-04-30T16:11:34+00:00,failed_send,-1.0,rbc global asset management,rbc.com,first.last,spencer.sillaste@rbc.com,,sender
+2026-04-30T16:11:37+00:00,failed_send,-1.0,rbc global asset management,rbc.com,first.last,mitesh.mistry@rbc.com,,sender
+2026-04-30T16:11:39+00:00,failed_send,-1.0,rbc global asset management,rbc.com,first.last,connor.heggart@rbc.com,,sender
+2026-04-30T16:11:42+00:00,failed_send,-1.0,sun life global investments,sunlife.com,first.last,alireza.rezaeian@sunlife.com,,sender
+2026-04-30T16:11:45+00:00,failed_send,-1.0,scotiabank,scotiabank.com,first.last,tim.zheng@scotiabank.com,,sender
+2026-04-30T16:11:47+00:00,failed_send,-1.0,bmo global asset management,bmogam.com,first.last,yibo.zhang@bmogam.com,,sender
+2026-04-30T16:11:49+00:00,failed_send,-1.0,bmo global asset management,bmogam.com,first.last,julean.albidone@bmogam.com,,sender
+2026-04-30T16:11:52+00:00,failed_send,-1.0,ci global asset management,ci.com,first.last,yiqi.shi@ci.com,,sender
+2026-04-30T16:11:54+00:00,failed_send,-1.0,manulife,manulife.com,first.last,yi.zhao@manulife.com,,sender
+2026-04-30T16:11:56+00:00,failed_send,-1.0,manulife,manulife.com,first.last,grace.tao@manulife.com,,sender
+2026-04-30T16:11:58+00:00,failed_send,-1.0,manulife financial,manulife.com,first.last,tianyi.liu@manulife.com,,sender
+2026-04-30T16:12:01+00:00,failed_send,-1.0,rbc global asset management,rbc.com,first.last,julian.douglass@rbc.com,,sender
+2026-04-30T16:12:03+00:00,failed_send,-1.0,deloitte,deloitte.com,flast,rahmar@deloitte.com,,sender
+2026-04-30T16:12:05+00:00,failed_send,-1.0,deloitte,deloitte.com,flast,cliu@deloitte.com,,sender
+2026-04-30T16:12:07+00:00,failed_send,-1.0,deloitte canada,deloitte.ca,first.last,jesse.lee@deloitte.ca,,sender
+2026-04-30T16:12:10+00:00,failed_send,-1.0,fincad,fincad.com,first.last,michael.bandurchin@fincad.com,,sender
+2026-04-30T16:12:13+00:00,failed_send,-1.0,bmo,bmo.com,first.last,viola.z@bmo.com,,sender
+2026-04-30T16:12:16+00:00,failed_send,-1.0,deloitte,deloitte.com,flast,zpan@deloitte.com,,sender
+2026-04-30T16:12:19+00:00,failed_send,-1.0,deloitte,deloitte.com,flast,yqiu@deloitte.com,,sender
+2026-04-30T16:12:21+00:00,failed_send,-1.0,deloitte,deloitte.com,flast,ryang@deloitte.com,,sender
+2026-04-30T16:12:23+00:00,failed_send,-1.0,ey,ey.com,first.last,chenyu.zhong@ey.com,,sender
+2026-04-30T16:12:27+00:00,failed_send,-1.0,rbc,rbc.com,first.last,thomas.balzer@rbc.com,,sender
+2026-04-30T16:12:29+00:00,failed_send,-1.0,bmo financial,bmo.com,first.last,jian.wang@bmo.com,,sender
+2026-04-30T16:12:31+00:00,failed_send,-1.0,bmo financial,bmo.com,first.last,henry.li@bmo.com,,sender
+2026-04-30T16:12:33+00:00,failed_send,-1.0,rbc,rbc.com,first.last,grace.xu@rbc.com,,sender
+2026-04-30T16:12:36+00:00,failed_send,-1.0,bank of montreal,bmo.com,first.last,bing.l@bmo.com,,sender
+2026-04-30T16:12:41+00:00,failed_send,-1.0,bmo,bmo.com,first.last,nguyen.conghuy@bmo.com,,sender
+2026-04-30T16:12:45+00:00,failed_send,-1.0,bmo financial,bmo.com,first.last,sandy.jin@bmo.com,,sender
+2026-04-30T16:12:48+00:00,failed_send,-1.0,bmo financial,bmo.com,first.last,mehdi.hajari@bmo.com,,sender
+2026-04-30T16:12:51+00:00,failed_send,-1.0,gwn capital management,gwncapital.com,first.last,dan.cook@gwncapital.com,,sender
+2026-04-30T16:12:54+00:00,failed_send,-1.0,payments canada,payments.ca,first.last,tarush.gupta@payments.ca,,sender
+2026-04-30T16:12:57+00:00,failed_send,-1.0,rbc,rbc.com,first.last,matthew.ford@rbc.com,,sender
+2026-04-30T16:13:00+00:00,failed_send,-1.0,rbc,rbc.com,first.last,dustin.ren@rbc.com,,sender
+2026-04-30T16:13:03+00:00,failed_send,-1.0,rbc,rbc.com,first.last,ted.cheng@rbc.com,,sender
+2026-04-30T16:13:07+00:00,failed_send,-1.0,rbc,rbc.com,first.last,fangpeng.dong@rbc.com,,sender
+2026-04-30T16:13:10+00:00,failed_send,-1.0,rbc markets,rbc.com,first.last,huixin.li@rbc.com,,sender
+2026-04-30T16:13:13+00:00,failed_send,-1.0,wavefront global asset management,wavefrontglobal.com,first.last,amir.ljad@wavefrontglobal.com,,sender
+2026-04-30T16:13:16+00:00,failed_send,-1.0,agf investments,agf.com,first.last,yaolun.yin@agf.com,,sender
+2026-04-30T16:13:20+00:00,failed_send,-1.0,arrow capital management,arrow-capital.com,first.last,minh.cheng@arrow-capital.com,,sender
+2026-04-30T16:13:23+00:00,failed_send,-1.0,bayport financial services,bayportfinance.com,first.last,genaral.rukanda@bayportfinance.com,,sender
+2026-04-30T16:13:27+00:00,failed_send,-1.0,cmb wealth management,td.com,first.last,xiangyu.xie@td.com,,sender
+2026-04-30T16:13:30+00:00,failed_send,-1.0,cormark,cormark.com,first.last,mark.deriet@cormark.com,,sender
+2026-04-30T16:13:34+00:00,failed_send,-1.0,crisil,crisil.com,first.last,amit.dhakate@crisil.com,,sender
+2026-04-30T16:13:38+00:00,failed_send,-1.0,fis,fisglobal.com,first.last,xiaowu.k@fisglobal.com,,sender
+2026-04-30T16:13:41+00:00,failed_send,-1.0,goldenwise capital management,gwisecapital.com,first.last,kirill.baglay@gwisecapital.com,,sender
+2026-04-30T16:13:44+00:00,failed_send,-1.0,goldenwise capital management,gwisecapital.com,first.last,tianwen.tao@gwisecapital.com,,sender
+2026-04-30T16:13:47+00:00,failed_send,-1.0,hartree partners,hartreepartners.com,first.last,charles.zha@hartreepartners.com,,sender
+2026-04-30T16:13:51+00:00,failed_send,-1.0,huatai securities,htsc.com,first.last,congkai.peng@htsc.com,,sender
+2026-04-30T16:13:54+00:00,failed_send,-1.0,kpmg canada,kpmg.ca,first.last,dmitry.f@kpmg.ca,,sender
+2026-04-30T16:13:58+00:00,failed_send,-1.0,laketon investment management,laketon.com,first.last,tony.batek@laketon.com,,sender
+2026-04-30T16:14:02+00:00,failed_send,-1.0,s p global,spglobal.com,first.last,jingran.cui@spglobal.com,,sender
+2026-04-30T16:14:06+00:00,failed_send,-1.0,scivest capital management,scivest.com,first.last,jeremy.lin@scivest.com,,sender
+2026-04-30T16:14:09+00:00,failed_send,-1.0,societe generale,socgen.com,first.last,oussama.baksys@socgen.com,,sender
+2026-04-30T16:14:13+00:00,failed_send,-1.0,solactive,solactive.com,first.last,sameer.soni@solactive.com,,sender
+2026-04-30T16:14:16+00:00,failed_send,-1.0,thomson reuters,thomsonreuters.com,first.last,alexey.deynega@thomsonreuters.com,,sender
+2026-04-30T16:14:19+00:00,failed_send,-1.0,wealth engine,wealthengine.com,first.last,nora.zhou@wealthengine.com,,sender
+2026-04-30T16:14:21+00:00,failed_send,-1.0,aequitas neo exchange,cboe.com,first.last,tai.zong@cboe.com,,sender
+2026-04-30T16:14:23+00:00,failed_send,-1.0,coinbase,coinbase.com,first.last,kartikey.sinha@coinbase.com,,sender
+2026-04-30T16:14:26+00:00,failed_send,-1.0,cpp,cppib.com,first.last,faiz.ansari@cppib.com,,sender
+2026-04-30T16:14:28+00:00,failed_send,-1.0,cpp,cppib.com,first.last,ziwei.w@cppib.com,,sender
+2026-04-30T16:14:30+00:00,failed_send,-1.0,cpp,cppib.com,first.last,bella.ainani@cppib.com,,sender
+2026-04-30T16:14:32+00:00,failed_send,-1.0,credit suisse,credit-suisse.com,first.last,yash.gaiiwala@credit-suisse.com,,sender
+2026-04-30T16:14:34+00:00,failed_send,-1.0,genus capital,genuscap.com,first.last,zijian.zhu@genuscap.com,,sender
+2026-04-30T16:14:36+00:00,failed_send,-1.0,global x canada,globalx.ca,first.last,eden.ye@globalx.ca,,sender
+2026-04-30T16:14:38+00:00,failed_send,-1.0,ia global asset management,ia.ca,first.last,jingkai.x@ia.ca,,sender
+2026-04-30T16:14:41+00:00,failed_send,-1.0,murex,murex.com,first.last,pompiliu.marin@murex.com,,sender
+2026-04-30T16:14:44+00:00,failed_send,-1.0,nei investments,neiinvestments.com,first.last,anthony.rago@neiinvestments.com,,sender
+2026-04-30T16:14:46+00:00,failed_send,-1.0,nomura,nomura.com,first.last,prateek.rastogi@nomura.com,,sender
+2026-04-30T16:14:48+00:00,failed_send,-1.0,optrust,optrust.com,first.last,eric.tichbourne@optrust.com,,sender
+2026-04-30T16:14:50+00:00,failed_send,-1.0,polar asset management partners,polaramp.com,first.last,jingyu.bao@polaramp.com,,sender
+2026-04-30T16:14:53+00:00,failed_send,-1.0,university pension plan,upp.ca,first.last,elena.kheir@upp.ca,,sender
+2026-04-30T16:14:55+00:00,failed_send,-1.0,validus risk management,validusrm.com,first.last,samira.ghanbarian@validusrm.com,,sender
+2026-04-30T16:14:57+00:00,failed_send,-1.0,ventum financial,ventumfinancial.com,first.last,joseph.farrell@ventumfinancial.com,,sender
+2026-04-30T16:14:59+00:00,failed_send,-1.0,first west credit union,firstwestcu.ca,flast,djo@firstwestcu.ca,,sender
+2026-04-30T19:23:30+00:00,failed_send,-1.0,balyasny asset management,bamfunds.com,flast,tlezhao@bamfunds.com,,sender
+2026-04-30T19:23:34+00:00,failed_send,-1.0,blackrock,blackrock.com,first.last,jad.elamrani@blackrock.com,,sender
+2026-04-30T19:23:37+00:00,failed_send,-1.0,bank of america merrill lynch,bofa.com,first.last,kelvin.zhang@bofa.com,,sender
+2026-04-30T19:23:41+00:00,failed_send,-1.0,jpmorgan chase private bank,jpmorgan.com,first.last,raj.kohli@jpmorgan.com,,sender
+2026-04-30T19:23:44+00:00,failed_send,-1.0,morgan stanley,morganstanley.com,first.last,richa.p@morganstanley.com,,sender
+2026-04-30T19:23:49+00:00,failed_send,-1.0,morgan stanley,morganstanley.com,first.last,mallory.kropf@morganstanley.com,,sender
+2026-04-30T19:23:53+00:00,failed_send,-1.0,bmo capital markets,bmo.com,first.last,rahul.jaideep@bmo.com,,sender
+2026-04-30T19:23:57+00:00,failed_send,-1.0,bmo capital markets,bmo.com,first.last,sigitas.keras@bmo.com,,sender
+2026-04-30T19:24:01+00:00,failed_send,-1.0,bmo capital markets,bmo.com,first.last,sam.senko@bmo.com,,sender
+2026-04-30T19:24:05+00:00,failed_send,-1.0,bmo capital markets,bmo.com,first.last,maggie.huang@bmo.com,,sender
+2026-04-30T19:24:09+00:00,failed_send,-1.0,bmo capital markets,bmo.com,first.last,david.cheng@bmo.com,,sender
+2026-04-30T19:24:13+00:00,failed_send,-1.0,brookfield asset management,brookfield.com,first.last,anish.jain@brookfield.com,,sender
+2026-04-30T19:24:16+00:00,failed_send,-1.0,brookfield asset management,brookfield.com,first.last,mitchell.ho@brookfield.com,,sender
+2026-04-30T19:24:21+00:00,failed_send,-1.0,brookfield asset management,brookfield.com,first.last,hajar.bouchebti@brookfield.com,,sender
+2026-04-30T19:24:24+00:00,failed_send,-1.0,brookfield asset management,brookfield.com,first.last,howard.c@brookfield.com,,sender
+2026-04-30T19:24:27+00:00,failed_send,-1.0,brookfield asset management,brookfield.com,first.last,arun.thomas@brookfield.com,,sender
+2026-04-30T19:24:31+00:00,failed_send,-1.0,bmo,bmo.com,first.last,nguyen.conghuy@bmo.com,,sender
+2026-04-30T19:24:35+00:00,failed_send,-1.0,fis,fisglobal.com,first.last,xiaowu.k@fisglobal.com,,sender
+2026-04-30T19:53:44+00:00,sent,1.0,balyasny asset management,bamfunds.com,flast,tlezhao@bamfunds.com,<6053e14a-c040-4e74-8d7e-458264fd9f3f@local.jobapp>,sender
+2026-04-30T19:57:32+00:00,sent,1.0,blackrock,blackrock.com,first.last,jad.elamrani@blackrock.com,<5d1b03f5-5dd5-4aba-88f6-fd7306681b23@local.jobapp>,sender
+2026-04-30T19:57:47+00:00,sent,1.0,bank of america merrill lynch,bofa.com,first.last,kelvin.zhang@bofa.com,<7b4c69f8-e205-4502-9071-86261a319ef7@local.jobapp>,sender
+2026-04-30T19:58:03+00:00,sent,1.0,morgan stanley,morganstanley.com,first.last,richa.p@morganstanley.com,<3ee3bdf9-f5f5-4795-948d-660cc03f59f8@local.jobapp>,sender
+2026-04-30T19:58:20+00:00,sent,1.0,morgan stanley,morganstanley.com,first.last,mallory.kropf@morganstanley.com,<c5bc44d9-8608-4fe2-bc64-fa0f042f49df@local.jobapp>,sender
+2026-04-30T19:58:37+00:00,sent,1.0,bmo capital markets,bmo.com,first.last,rahul.jaideep@bmo.com,<c9c27daa-1e2a-4b4f-acb2-9939364ca103@local.jobapp>,sender
+2026-04-30T20:00:33+00:00,hard_bounce,-3.0,morgan stanley,morganstanley.com,first.last,richa.p@morganstanley.com,<3ee3bdf9-f5f5-4795-948d-660cc03f59f8@local.jobapp>,bounce_parser
+2026-04-30T20:00:33+00:00,hard_bounce,-3.0,bmo capital markets,bmo.com,first.last,rahul.jaideep@bmo.com,<c9c27daa-1e2a-4b4f-acb2-9939364ca103@local.jobapp>,bounce_parser
+2026-04-30T20:21:34+00:00,replied,4.0,morgan stanley,morganstanley.com,first.last,mallory.kropf@morganstanley.com,<c5bc44d9-8608-4fe2-bc64-fa0f042f49df@local.jobapp>,reply_parser
+2026-05-01T14:26:16+00:00,sent,1.0,bmo capital markets,bmo.com,first.last,sigitas.keras@bmo.com,<b1cda4f3-11ba-443d-aaed-3f9bdb88f06f@local.jobapp>,sender
+2026-05-01T14:26:28+00:00,sent,1.0,bmo capital markets,bmo.com,first.last,sam.senko@bmo.com,<56508322-8200-44c5-a1ad-1a0cd6182fa7@local.jobapp>,sender
+2026-05-01T14:26:41+00:00,sent,1.0,bmo capital markets,bmo.com,first.last,maggie.huang@bmo.com,<8bb17d10-6f51-48d5-ab83-b2ae7f919064@local.jobapp>,sender
+2026-05-01T14:26:52+00:00,sent,1.0,bmo capital markets,bmo.com,first.last,david.cheng@bmo.com,<5f90239c-7f45-44ac-9183-adfecfb7c2f6@local.jobapp>,sender
+2026-05-01T14:27:04+00:00,sent,1.0,bmo capital markets,bmo.com,first.last,shanda.feng@bmo.com,<25ca4047-8887-42bd-8b6b-8f1687f68b86@local.jobapp>,sender
+2026-05-01T14:32:03+00:00,hard_bounce,-3.0,bmo capital markets,bmo.com,first.last,sigitas.keras@bmo.com,<b1cda4f3-11ba-443d-aaed-3f9bdb88f06f@local.jobapp>,bounce_parser
+2026-05-01T14:32:03+00:00,hard_bounce,-3.0,bmo capital markets,bmo.com,first.last,sam.senko@bmo.com,<56508322-8200-44c5-a1ad-1a0cd6182fa7@local.jobapp>,bounce_parser
+2026-05-01T14:32:03+00:00,hard_bounce,-3.0,bmo capital markets,bmo.com,first.last,maggie.huang@bmo.com,<8bb17d10-6f51-48d5-ab83-b2ae7f919064@local.jobapp>,bounce_parser
+2026-05-01T14:32:22+00:00,replied,4.0,bmo capital markets,bmo.com,first.last,david.cheng@bmo.com,<5f90239c-7f45-44ac-9183-adfecfb7c2f6@local.jobapp>,reply_parser
+2026-05-01T15:47:17+00:00,sent,1.0,bmo capital markets,bmo.com,first.last,hamed.rasouli@bmo.com,<be3c2107-6bec-40ee-aacd-81fb02754b9b@local.jobapp>,sender
+2026-05-01T15:47:29+00:00,sent,1.0,blackrock,blackrock.com,first.last,david.vestergaard@blackrock.com,<bc104223-ef46-470d-8147-cb20e6d3d196@local.jobapp>,sender
+2026-05-01T15:47:41+00:00,sent,1.0,fidelity investments,fidelity.com,first.last,zhuoran.l@fidelity.com,<1c75232a-13be-48ef-8de1-f302b246764e@local.jobapp>,sender
+2026-05-01T15:47:52+00:00,sent,1.0,brookfield asset management,brookfield.com,first.last,prashant.keswani@brookfield.com,<5e695ec8-6c90-4e28-9947-ed6b426ce58d@local.jobapp>,sender
+2026-05-01T15:48:04+00:00,sent,1.0,brookfield asset management,brookfield.com,first.last,hasan.syed@brookfield.com,<065fcef1-6026-411f-8fd2-11806e319f03@local.jobapp>,sender
+2026-05-01T15:57:27+00:00,hard_bounce,-3.0,blackrock,blackrock.com,first.last,david.vestergaard@blackrock.com,<bc104223-ef46-470d-8147-cb20e6d3d196@local.jobapp>,bounce_parser
+2026-05-01T15:57:27+00:00,hard_bounce,-3.0,fidelity investments,fidelity.com,first.last,zhuoran.l@fidelity.com,<1c75232a-13be-48ef-8de1-f302b246764e@local.jobapp>,bounce_parser
+2026-05-04T18:07:11+00:00,sent,1.0,brookfield asset management,brookfield.com,first.last,carter.mcmaster@brookfield.com,<52d35e5e-b6a9-4c53-b018-f440c4b8b011@local.jobapp>,sender
+2026-05-04T18:07:32+00:00,sent,1.0,brookfield asset management,brookfield.com,first.last,paul.moylan@brookfield.com,<1dc37f0f-e1db-44fe-8f33-a4d49883e4bc@local.jobapp>,sender
+2026-05-04T18:07:54+00:00,sent,1.0,brookfield asset management,brookfield.com,first.last,kiera.morton@brookfield.com,<d517f680-a6ca-4e69-8716-fea2ab56bb86@local.jobapp>,sender
+2026-05-04T18:08:16+00:00,sent,1.0,brookfield asset management,brookfield.com,first.last,ryan.turnbull@brookfield.com,<59eace61-985e-4b95-a1ca-dee472316587@local.jobapp>,sender
+2026-05-04T18:08:37+00:00,sent,1.0,brookfield asset management,brookfield.com,first.last,anish.jain@brookfield.com,<e2eb0096-5b30-4a43-8b50-fa808cda643f@local.jobapp>,sender
+2026-05-04T18:20:01+00:00,replied,4.0,brookfield asset management,brookfield.com,first.last,paul.moylan@brookfield.com,<1dc37f0f-e1db-44fe-8f33-a4d49883e4bc@local.jobapp>,reply_parser
+2026-05-04T20:17:58+00:00,sent,1.0,brookfield asset management,brookfield.com,first.last,mitchell.ho@brookfield.com,<8ab1cc06-0787-4ee9-b0e6-0683541c74b4@local.jobapp>,sender
+2026-05-04T20:18:20+00:00,sent,1.0,brookfield asset management,brookfield.com,first.last,hajar.bouchebti@brookfield.com,<fa103a6b-3803-4883-b080-2eafbe9223b9@local.jobapp>,sender
+2026-05-04T20:18:42+00:00,sent,1.0,brookfield asset management,brookfield.com,first.last,howard.c@brookfield.com,<d07df1f4-20a0-432e-93b0-19c79be126c8@local.jobapp>,sender
+2026-05-04T20:19:04+00:00,sent,1.0,brookfield asset management,brookfield.com,first.last,arun.thomas@brookfield.com,<8837fd59-de3b-4fa4-ab2b-7a66f8a29404@local.jobapp>,sender
+2026-05-04T20:19:26+00:00,sent,1.0,canada guaranty,canadaguaranty.ca,first.last,michael.sawvers@canadaguaranty.ca,<5cd43be9-c921-4383-8835-86fe7676272d@local.jobapp>,sender
+2026-05-05T13:26:38+00:00,hard_bounce,-3.0,brookfield asset management,brookfield.com,first.last,howard.c@brookfield.com,<d07df1f4-20a0-432e-93b0-19c79be126c8@local.jobapp>,bounce_parser
+2026-05-05T13:26:38+00:00,hard_bounce,-3.0,canada guaranty,canadaguaranty.ca,first.last,michael.sawvers@canadaguaranty.ca,<5cd43be9-c921-4383-8835-86fe7676272d@local.jobapp>,bounce_parser
+2026-05-05T13:30:40+00:00,sent,1.0,canada guaranty,canadaguaranty.ca,first.last,ruihong.jiang@canadaguaranty.ca,<f3c0a531-8d53-4e83-b168-2be1ee4f7dad@local.jobapp>,sender
+2026-05-05T13:30:52+00:00,sent,1.0,bmo global asset management,bmogam.com,first.last,yibo.zhang@bmogam.com,<a3b43665-720b-4712-b839-8dc3b45755f8@local.jobapp>,sender
+2026-05-05T13:31:04+00:00,sent,1.0,bmo global asset management,bmogam.com,first.last,julean.albidone@bmogam.com,<891e2245-1b58-48ea-bcd0-e19a694461cc@local.jobapp>,sender
+2026-05-05T13:31:16+00:00,sent,1.0,deloitte,deloitte.com,flast,rahmar@deloitte.com,<23ad54c4-c5f9-402c-9b6e-557bf5faa728@local.jobapp>,sender
+2026-05-05T13:31:28+00:00,sent,1.0,deloitte,deloitte.com,flast,cliu@deloitte.com,<949d9c2a-a1c7-4e8f-ae25-cff57daf4113@local.jobapp>,sender
+2026-05-05T14:13:11+00:00,hard_bounce,-3.0,deloitte,deloitte.com,flast,cliu@deloitte.com,<949d9c2a-a1c7-4e8f-ae25-cff57daf4113@local.jobapp>,bounce_parser
+2026-05-07T14:48:08+00:00,sent,1.0,neuberger berman,neubergerberman.com,first.last,joel.conway@neubergerberman.com,<18cfb11d-4899-425e-b3b8-3f25e70bbf53@local.jobapp>,sender
+2026-05-07T14:48:21+00:00,sent,1.0,neuberger berman,neubergerberman.com,first.last,seth.tolev@neubergerberman.com,<199ef94c-07c5-4380-8023-b01e48480502@local.jobapp>,sender
+2026-05-07T14:48:33+00:00,sent,1.0,millennium,millennium.com,first.last,andrew.moffatt@millennium.com,<a28d4433-9505-47ff-967d-0a33a2d3023f@local.jobapp>,sender
+2026-05-07T14:48:46+00:00,sent,1.0,neuberger berman,neubergerberman.com,first.last,guanwei.zhang@neubergerberman.com,<1e82837c-aede-421a-9148-82b38bb2a380@local.jobapp>,sender
+2026-05-07T14:48:59+00:00,sent,1.0,millennium,millennium.com,first.last,jason.strachan@millennium.com,<f59fffdd-957b-4d71-9cba-502779ce467d@local.jobapp>,sender
+2026-05-07T15:12:22+00:00,hard_bounce,-3.0,millennium,millennium.com,first.last,andrew.moffatt@millennium.com,<a28d4433-9505-47ff-967d-0a33a2d3023f@local.jobapp>,bounce_parser
+2026-05-07T15:12:23+00:00,hard_bounce,-3.0,millennium,millennium.com,first.last,jason.strachan@millennium.com,<f59fffdd-957b-4d71-9cba-502779ce467d@local.jobapp>,bounce_parser
+2026-05-07T15:21:14+00:00,sent,1.0,millennium,millennium.com,flast,amoffatt@millennium.com,<5c76dd1a-9197-46f6-ba53-eea0731d2b20@local.jobapp>,sender
+2026-05-07T15:21:27+00:00,sent,1.0,millennium,millennium.com,flast,jstrachan@millennium.com,<4baf56a7-eab7-4cb5-9ce7-89af37c1be4c@local.jobapp>,sender
+2026-05-07T15:21:39+00:00,sent,1.0,neuberger berman,neubergerberman.com,first.last,jiezhong.chen@neubergerberman.com,<ee463fef-6c58-4b80-8124-e419fee943d8@local.jobapp>,sender
+2026-05-07T15:21:52+00:00,sent,1.0,raymond james,raymondjames.com,first.last,holden.woodcroft@raymondjames.com,<8d4e06f6-aade-4d46-891d-90968952307d@local.jobapp>,sender
+2026-05-07T15:22:04+00:00,sent,1.0,neuberger berman,neubergerberman.com,first.last,philip.wong@neubergerberman.com,<33bec928-d52a-40f1-a40f-243cbbefb4d2@local.jobapp>,sender
+2026-05-07T15:53:43+00:00,hard_bounce,-3.0,millennium,millennium.com,flast,amoffatt@millennium.com,<5c76dd1a-9197-46f6-ba53-eea0731d2b20@local.jobapp>,bounce_parser
+2026-05-07T15:53:44+00:00,hard_bounce,-3.0,millennium,millennium.com,flast,jstrachan@millennium.com,<4baf56a7-eab7-4cb5-9ce7-89af37c1be4c@local.jobapp>,bounce_parser
+2026-05-07T15:53:44+00:00,hard_bounce,-3.0,raymond james,raymondjames.com,first.last,holden.woodcroft@raymondjames.com,<8d4e06f6-aade-4d46-891d-90968952307d@local.jobapp>,bounce_parser
+2026-05-07T17:11:24+00:00,sent,1.0,millennium,millennium.com,firstlast,andrewmoffatt@millennium.com,<50da1f99-53cd-4de5-8517-2552f05e6da0@local.jobapp>,sender
+2026-05-07T17:11:36+00:00,sent,1.0,millennium,millennium.com,firstlast,jasonstrachan@millennium.com,<51bdeed7-9726-4d83-8a7f-5213e9f39a8d@local.jobapp>,sender
+2026-05-07T17:11:50+00:00,sent,1.0,raymond james,raymondjames.com,flast,hwoodcroft@raymondjames.com,<b3fe21d1-ca69-499b-8d61-7cd4d48e32ce@local.jobapp>,sender
+2026-05-07T17:12:03+00:00,sent,1.0,raymond james,raymondjames.com,flast,tlevitin@raymondjames.com,<857dae93-9141-448c-8d1b-1122e6971325@local.jobapp>,sender
+2026-05-07T17:12:15+00:00,sent,1.0,neuberger berman,neubergerberman.com,first.last,gideon.schapiro@neubergerberman.com,<162758aa-a179-4960-b49c-e0d5a43ac14e@local.jobapp>,sender
+2026-05-07T17:29:11+00:00,sent,1.0,bank of america,bofa.com,first.last,deepti.tiwari@bofa.com,<4d3fa0f5-16cd-4900-8955-a13976d0a9fe@local.jobapp>,sender
+2026-05-07T17:29:24+00:00,sent,1.0,houghton mifflin harcourt,houghtonmifflinharcourt.com,first.last,stanley.ebenezer@houghtonmifflinharcourt.com,<05a858da-16df-4650-a9f3-8be4aa23a03a@local.jobapp>,sender
+2026-05-07T17:29:37+00:00,sent,1.0,dv trading,dvtrading.ca,first.last,justin.n@dvtrading.ca,<9b95f039-172a-4635-aa08-3f3dca4d4785@local.jobapp>,sender
+2026-05-07T17:29:50+00:00,sent,1.0,citi,citi.com,flast,dsmith@citi.com,<677d2489-9f38-45db-960f-51338f5e7dc9@local.jobapp>,sender
+2026-05-07T17:30:02+00:00,sent,1.0,cubist systematic strategies,systematic-strategies.com,first.last,junfei.geng@systematic-strategies.com,<dd206e3d-ddc5-40a2-a7ea-99b259f1800d@local.jobapp>,sender
+2026-05-07T19:54:15+00:00,sent,1.0,jefferies,jefferies.com,flast,abauer@jefferies.com,<d65ec63e-5e1f-4833-a034-8ab6f8287a46@local.jobapp>,sender
+2026-05-07T19:54:28+00:00,sent,1.0,bank of america,bofa.com,first.last,jesse.gare@bofa.com,<03d263a6-b99f-4030-95e4-6bc034069325@local.jobapp>,sender
+2026-05-07T19:54:40+00:00,sent,1.0,barclays,barclays.com,first.last,yash.r@barclays.com,<6aeb5282-9782-409b-a38a-98845d46cd8a@local.jobapp>,sender
+2026-05-07T19:54:53+00:00,sent,1.0,citibank,citi.com,flast,jzhao@citi.com,<3301fd00-e69c-4853-937d-dddda90f0e37@local.jobapp>,sender
+2026-05-07T19:55:05+00:00,sent,1.0,citi,citi.com,flast,mk@citi.com,<268469ce-2a19-4ba5-8aa7-26f2d37f779b@local.jobapp>,sender
+2026-05-07T20:32:45+00:00,sent,1.0,citi,citi.com,flast,yj@citi.com,<d00f8032-db64-4038-a294-2e043466a636@local.jobapp>,sender
+2026-05-07T20:32:58+00:00,sent,1.0,citi,citi.com,flast,aachcar@citi.com,<eae8a08b-56fc-4c4a-ae0c-6f7796b204a2@local.jobapp>,sender
+2026-05-07T20:33:11+00:00,sent,1.0,citi,citi.com,flast,absikchi@citi.com,<54815dea-c2aa-4f28-bf5d-653bb70433ee@local.jobapp>,sender
+2026-05-07T20:33:24+00:00,sent,1.0,citi,citi.com,flast,myuan@citi.com,<8d55f58c-63dc-4ecf-bd8b-7f0afc2daec9@local.jobapp>,sender
+2026-05-07T20:33:37+00:00,sent,1.0,citi,citi.com,flast,psum@citi.com,<9e1c2455-e6de-4aaa-8974-5f41a26a9407@local.jobapp>,sender
+2026-05-08T01:09:28+00:00,sent,1.0,citi,citi.com,flast,yzhang@citi.com,<802a65bc-a49a-4e31-8c1b-e71a3bfd9279@local.jobapp>,sender
+2026-05-08T01:09:45+00:00,sent,1.0,citi,citi.com,flast,vkhatri@citi.com,<11ae5ef0-0695-4c85-a17b-e0693a42c8fa@local.jobapp>,sender
+2026-05-08T01:10:01+00:00,sent,1.0,citi,citi.com,flast,ssingh@citi.com,<cfaf7cd2-b3ed-4706-bbf0-89b3e9c5c6b4@local.jobapp>,sender
+2026-05-08T01:10:18+00:00,sent,1.0,citi,citi.com,flast,skapur@citi.com,<cf9df3e3-f727-4e1c-95a9-6af2843f6b63@local.jobapp>,sender
+2026-05-08T01:10:35+00:00,sent,1.0,citi,citi.com,flast,sinnocent@citi.com,<31c0df22-4753-43af-a06a-5324e0e085ad@local.jobapp>,sender
+2026-05-08T13:47:23+00:00,sent,1.0,citi,citi.com,flast,ajagota@citi.com,<0a55dc00-e3c4-44b9-8942-49b489216c77@local.jobapp>,sender
+2026-05-08T13:47:40+00:00,sent,1.0,citi,citi.com,flast,zximeng@citi.com,<6e20ca51-e6e7-402d-b78f-dcea255e4ce8@local.jobapp>,sender
+2026-05-08T13:47:58+00:00,sent,1.0,citi,citi.com,flast,aulhaq@citi.com,<414581e7-69c7-4458-bc33-036cafb43a00@local.jobapp>,sender
+2026-05-08T13:48:15+00:00,sent,1.0,citi,citi.com,flast,clahoud@citi.com,<ce66d85f-3db5-4027-ab01-d1db9654c8a4@local.jobapp>,sender
+2026-05-08T13:48:31+00:00,sent,1.0,citi,citi.com,flast,bwang@citi.com,<449e8ff3-0037-4c59-8e4d-1ab76b10846a@local.jobapp>,sender
+2026-05-08T18:08:18+00:00,sent,1.0,citi,citi.com,flast,ajaswal@citi.com,<6d61b13f-57c0-46d7-bf6d-9935625a9e2c@local.jobapp>,sender
+2026-05-08T18:08:32+00:00,sent,1.0,citi,citi.com,flast,nuiheme@citi.com,<3f447721-109b-43cf-af5c-66ceef359db0@local.jobapp>,sender
+2026-05-08T18:08:47+00:00,sent,1.0,citi,citi.com,flast,asingh@citi.com,<5f1763c6-b717-4ecd-a53d-849080f56098@local.jobapp>,sender
+2026-05-08T18:09:01+00:00,sent,1.0,citi,citi.com,flast,hlu@citi.com,<26fa64f1-e73d-4026-b85a-eb6857518bc0@local.jobapp>,sender
+2026-05-08T18:09:16+00:00,sent,1.0,goldman sachs,gs.com,first.last,david.g@gs.com,<9f7ae19c-e816-41b7-9dd0-e02692694e41@local.jobapp>,sender
+2026-05-11T16:50:38+00:00,sent,1.0,jefferies,jefferies.com,flast,jaiken@jefferies.com,<0a0d1997-106c-4990-998b-5c5b345f6514@local.jobapp>,sender
+2026-05-11T16:50:53+00:00,sent,1.0,jefferies,jefferies.com,flast,ragarwal@jefferies.com,<55b17908-42a1-4f9a-a786-b0872e82f622@local.jobapp>,sender
+2026-05-11T16:51:08+00:00,sent,1.0,jpmorgan chase private bank,jpmorgan.com,first.last,raj.kohli@jpmorgan.com,<3a9c3d9f-36ac-407f-b600-f155fb674d22@local.jobapp>,sender
+2026-05-11T16:51:21+00:00,sent,1.0,cibc capital markets,cibc.com,first.last,bryan.chuah@cibc.com,<546f71e9-6437-427e-bdea-2ae995e4847d@local.jobapp>,sender
+2026-05-11T16:51:35+00:00,sent,1.0,national bank of canada,nbc.ca,first.last,aayush.bhat@nbc.ca,<20fc703a-ddbb-4338-a758-f0e8123f7201@local.jobapp>,sender
+2026-05-11T17:04:00+00:00,sent,1.0,national bank of canada,nbc.ca,first.last,khashayar.badiee@nbc.ca,<2185f283-7516-4d4a-8d23-6d7ee0d954d9@local.jobapp>,sender
+2026-05-11T17:04:16+00:00,sent,1.0,rbc capital markets,rbccm.com,flast,cyu@rbccm.com,<3537f73f-4e38-48da-be56-5afeea4bcba4@local.jobapp>,sender
+2026-05-11T17:04:46+00:00,sent,1.0,rbc capital markets,rbccm.com,flast,ychen@rbccm.com,<d7e66b0c-d779-4075-af1c-cb7c4e22a8e1@local.jobapp>,sender
+2026-05-11T17:05:00+00:00,sent,1.0,rbc capital markets,rbccm.com,flast,rllie@rbccm.com,<cadd48c9-a71a-4d65-8ac8-c93f826d9dbb@local.jobapp>,sender
+2026-05-11T17:05:16+00:00,sent,1.0,rbc capital markets,rbccm.com,flast,jmeng@rbccm.com,<bf142ce7-07d5-4166-8c3b-7c5a82ba399a@local.jobapp>,sender
+2026-05-12T17:37:33+00:00,sent,1.0,scotiabank,scotiabank.com,first,agamdeep@scotiabank.com,<88db65b8-7413-4092-9cef-62ae4205b622@local.jobapp>,sender
+2026-05-12T17:37:57+00:00,sent,1.0,substrate capital,substrate.com,first.last,xavier.mootoo@substrate.com,<0af66cd2-e124-49aa-91be-c185c60c1e0d@local.jobapp>,sender
+2026-05-12T17:38:21+00:00,sent,1.0,td securities,tdsecurities.com,first,modi@tdsecurities.com,<9a49f681-ed85-406f-a9a6-fe20b808885b@local.jobapp>,sender
+2026-05-12T17:38:45+00:00,sent,1.0,cibc capital markets,cibc.com,first.last,david.wiredu@cibc.com,<1439bca2-33bb-4463-9205-3d8cd9b31d10@local.jobapp>,sender
+2026-05-12T17:39:10+00:00,sent,1.0,cibc capital markets,cibc.com,first.last,inaz.asadzadeh@cibc.com,<012fbbff-a13c-4350-a69e-fa13188054f5@local.jobapp>,sender

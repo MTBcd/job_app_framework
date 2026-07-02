@@ -1,0 +1,17 @@
+company_name,company_normalized,domain,email_pattern,confidence,source,notes
+Balyasny Asset Management,balyasny asset management,bamfunds.com,flast,0.95,https://leadiq.com/c/balyasny-asset-management-lp/5a1d96752300005e0085130d/email-format,multiple employee listings show first initial + last name
+BlackRock,blackrock,blackrock.com,first.last,0.95,https://leadiq.com/c/blackrock/5a1d959123000059008441a5/email-format,consistent across investor-relations contacts
+Credit Suisse,credit suisse,credit-suisse.com,first.last,0.95,https://leadiq.com/c/credit-suisse/5a1d8b32240000240066627b/email-format,pattern appears in corporate filings and press releases
+Deloitte,deloitte,deloitte.com,flast,0.95,https://leadiq.com/c/deloitte-consulting/5a1d95b92300005e008466f5/email-format,"global policy, verified across multiple offices"
+EY,ey,ey.com,first.last,0.95,https://leadiq.com/c/ey/5a1d7ef024000024005a0fd5/email-format,used worldwide; collisions handled with numeral suffix
+Fidelity Investments,fidelity investments,fidelity.com,first.last,0.95,https://leadiq.com/c/fidelity-investments/5a1d8a912400002400644651/email-format,standard for corporate and retail staff
+First West Credit Union,first west credit union,firstwestcu.ca,flast,0.95,https://leadiq.com/c/first-west-credit-union/5a1d7e5324000024005845cc/email-format,numerous personal addresses in press releases
+FIS,fis,fisglobal.com,first.last,0.95,https://leadiq.com/c/fis-global/5a1dde602300005c00ee79af/email-format,group-wide standard
+Genus Capital Management,genus capital management,genuscap.com,flast,0.95,https://prospeo.io/c/genus-capital-management-email-format,seen on regulatory filings
+BMO Global Asset Management (EMEA),bmo global asset management,bmogam.com,first.last,0.95,https://contactout.com/company/bmo-global-asset-management-emea-email-format-6539223,UK subsidiary but applies across EMEA desks
+Brookfield Asset Management,brookfield asset management,brookfield.com,first.last,0.95,https://bam.brookfield.com/press-releases/brookfield-asset-management-announces-pricing-550-million-notes-due-2031-and-450,press releases list multiple firstname.lastname addresses
+Canada Guaranty,canada guaranty,canadaguaranty.ca,first.last,0.95,https://licensingcomplaintofficers.fsco.gov.on.ca/ComplaintsOfficerListing/eng/leDefault.aspx,regulatory contact pages show firstname.lastname pattern
+BCS Global Markets,bcs global markets,bcsgm.com,firstlast,0.95,https://prospeo.io/c/bcs-global-markets-email-format,pattern confirmed across prime brokerage team
+Black Swan Dexteritas,black swan dexteritas,blackswandexteritas.com,first,0.95,https://blackswandexteritas.com/contact/,only firstname@ addresses published
+BMO (Bank of Montreal),bmo,bmo.com,first.last,0.95,https://contactout.com/company/Bank-of-Montreal-BMO-email-format-97535,standard across all BMO divisions
+BMO Capital Markets,bmo capital markets,bmo.com,first.last,0.95,https://leadiq.com/c/bmo-capital-markets/5a1d7e77240000240058ab6c/email-format,matches parent BMO pattern

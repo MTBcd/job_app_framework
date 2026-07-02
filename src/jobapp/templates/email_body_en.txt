@@ -1,0 +1,20 @@
+${salutation}
+
+I hope this message finds you well.
+
+I am reaching out to express my interest in potential opportunities at ${company}, particularly in quantitative research, model validation, or risk-related roles.
+
+I am a Toronto-based quantitative analyst with hands-on experience across asset management and hedge fund environments. My work has included developing stress-testing frameworks, volatility models, and portfolio analytics tools using Python and R.
+
+In particular, I have worked on implementing a Heston-Nandi GARCH model for OTC pricing validation, building a Merton-based credit risk stress-testing framework, and developing macro-regime and allocation models for portfolio construction and analysis.
+
+These experiences have allowed me to combine quantitative modelling, financial intuition, and practical implementation in real-world investment contexts.
+
+I would greatly appreciate the opportunity to connect and discuss how my background could be relevant to your team at ${company}. Please find my resume attached for your consideration.
+
+Thank you very much for your time and consideration.
+
+Kind regards,  
+${sender_name}  
+${sender_email}  
+${sender_phone}
