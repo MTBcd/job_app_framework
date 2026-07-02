@@ -115,6 +115,8 @@ These are bugs/design faults independent of any re-architecture decision. I am *
 8. **Deliverability gaps**: fake Message-ID domain, no `List-Unsubscribe`, no plain+HTML alternative, per-message SMTP connections, no warm-up pacing beyond a fixed sleep, no SPF/DKIM/DMARC story. Fine for 3 personal emails a day; fatal for a product whose deliverability *is* the product.
 9. **Dead code as noise**: ~215 lines of commented-out duplicates (half of `cleaning.py`, the old `send_dataframe`), module headers like `# file: src/jobapp/company.py`, double imports — artifacts of copy-paste iteration that make every future diff harder to review.
 10. **Windows-coupled artifacts**: committed `.venvmail` with `.exe` files; absolute `C:\Users\...` paths visible in committed logs.
+11. **Newline-separated raw text is never parsed line-by-line** *(found by the M1 characterization suite)*: `parse_raw_text` runs `normalize_whitespace` — which collapses `\n` to spaces — *before* splitting on `[\n|]`, so pasted multi-line LinkedIn blobs become one line and name/title/company extraction silently degrades; only `|`-separated input works as designed.
+12. **Person-key identity collapses** *(found by the M1 characterization suite)*: `build_person_key` uses the primary key path when *any* of first/last/company is present, so a nameless contact with only a company gets the key `"acme"` — every such contact at that company shares one identity for dedupe and attempt counting. A fully empty row yields the literal key `"||"` (the sha256 fallback is unreachable).
 
 ### 2.4 What V0 got *right* (credit where due)
 
