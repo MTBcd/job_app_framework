@@ -49,7 +49,13 @@ class User(TimestampMixin, Base):
     id: Mapped[str] = mapped_column(String(36), primary_key=True, default=_uuid)
     clerk_user_id: Mapped[str] = mapped_column(String(64), unique=True, index=True)
     email: Mapped[str] = mapped_column(String(320))
+    full_name: Mapped[str] = mapped_column(String(255), default="")
+    target_roles: Mapped[list] = mapped_column(JSON, default=list)
+    tone_default: Mapped[str] = mapped_column(String(20), default="direct")
+    signature: Mapped[str] = mapped_column(Text, default="")
     plan: Mapped[str] = mapped_column(String(20), default="free")
+    plan_expires_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    weekly_digest: Mapped[bool] = mapped_column(Boolean, default=True)
     stripe_customer_id: Mapped[str | None] = mapped_column(String(64))
 
 
@@ -63,6 +69,8 @@ class Document(TimestampMixin, Base):
     kind: Mapped[str] = mapped_column(String(20), default="cv")
     filename: Mapped[str] = mapped_column(String(255), default="")
     content_text: Mapped[str] = mapped_column(Text, default="")
+    parsed_profile: Mapped[dict] = mapped_column(JSON, default=dict)
+    parse_warnings: Mapped[list] = mapped_column(JSON, default=list)
 
 
 class Company(TimestampMixin, Base):
@@ -141,7 +149,16 @@ class Application(TimestampMixin, Base):
     user_id: Mapped[str] = mapped_column(ForeignKey("users.id"), index=True)
     company_id: Mapped[str] = mapped_column(ForeignKey("companies.id"), index=True)
     contact_id: Mapped[str | None] = mapped_column(ForeignKey("contacts.id"))
+    job_posting_id: Mapped[str | None] = mapped_column(ForeignKey("job_postings.id"))
     status: Mapped[str] = mapped_column(String(20), default="draft", index=True)
+    pipeline_stage: Mapped[str] = mapped_column(String(30), default="")
+    tone: Mapped[str] = mapped_column(String(20), default="direct")
+    optimized_cv: Mapped[str | None] = mapped_column(Text)
+    outcome: Mapped[str] = mapped_column(String(20), default="pending")
+    outcome_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    follow_up_count: Mapped[int] = mapped_column(Integer, default=0)
+    last_reply_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    batch_id: Mapped[str | None] = mapped_column(String(36), index=True)
     email_to: Mapped[str] = mapped_column(String(320), default="")
     subject: Mapped[str] = mapped_column(String(500), default="")
     body: Mapped[str] = mapped_column(Text, default="")
@@ -157,6 +174,46 @@ class Application(TimestampMixin, Base):
         onupdate=func.now(),
         nullable=False,
     )
+
+
+class JobPosting(TimestampMixin, Base):
+    __tablename__ = "job_postings"
+
+    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=_uuid)
+    user_id: Mapped[str] = mapped_column(ForeignKey("users.id"), index=True)
+    company_id: Mapped[str | None] = mapped_column(ForeignKey("companies.id"))
+    title: Mapped[str] = mapped_column(String(255), default="")
+    description_text: Mapped[str] = mapped_column(Text, default="")
+    url: Mapped[str] = mapped_column(String(1000), default="")
+    source: Mapped[str] = mapped_column(String(20), default="pasted")
+
+
+class MatchReport(TimestampMixin, Base):
+    """Fit analysis per application (spec §6 stage 3)."""
+
+    __tablename__ = "match_reports"
+
+    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=_uuid)
+    application_id: Mapped[str] = mapped_column(
+        ForeignKey("applications.id"), unique=True
+    )
+    score: Mapped[int | None] = mapped_column(Integer)
+    strengths: Mapped[list] = mapped_column(JSON, default=list)
+    gaps: Mapped[list] = mapped_column(JSON, default=list)
+    missing_keywords: Mapped[list] = mapped_column(JSON, default=list)
+    model: Mapped[str] = mapped_column(String(60), default="")
+
+
+class CompanyProfile(TimestampMixin, Base):
+    """Global research cache keyed by domain — one research serves all users."""
+
+    __tablename__ = "company_profiles"
+
+    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=_uuid)
+    domain: Mapped[str] = mapped_column(String(255), unique=True, index=True)
+    brief: Mapped[dict] = mapped_column(JSON, default=dict)
+    sources: Mapped[list] = mapped_column(JSON, default=list)
+    refreshed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
 
 
 class Event(TimestampMixin, Base):

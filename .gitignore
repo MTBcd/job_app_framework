@@ -21,6 +21,10 @@ build/
 .coverage
 htmlcov/
 
+# Local databases
+*.db
+*.sqlite3
+
 # Local data and logs (contact PII must never enter git)
 data/raw/
 data/processed/
