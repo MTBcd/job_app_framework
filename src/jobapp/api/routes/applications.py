@@ -41,21 +41,28 @@ class ApplicationOut(BaseModel):
     status: str
     pipeline_stage: str
     email_to: str
+    email_source: str = ""
+    email_label: str = ""
+    email_confidence: float = 0.0
+    contact_rationale: str = ""
     subject: str
     body: str
     review_reasons: list
     outcome: str
+    reply_preview: str = ""
+    personalization_plan: dict = {}
+    research: dict | None = None
     candidates: list[CandidateOut] = []
 
 
 def _to_out(session, application: Application, *, with_candidates: bool) -> ApplicationOut:
     company = session.get(Company, application.company_id)
     role = ""
-    if application.job_posting_id:
-        from jobapp.db.models import JobPosting
+    if application.opportunity_id:
+        from jobapp.db.models import Opportunity
 
-        posting = session.get(JobPosting, application.job_posting_id)
-        role = posting.title if posting else ""
+        opportunity = session.get(Opportunity, application.opportunity_id)
+        role = opportunity.title if opportunity else ""
     candidates: list[CandidateOut] = []
     if with_candidates and application.contact_id:
         rows = session.scalars(
@@ -73,6 +80,23 @@ def _to_out(session, application: Application, *, with_candidates: bool) -> Appl
             )
             for row in rows
         ]
+    research = None
+    if with_candidates and application.opportunity_id:
+        from jobapp.db.models import ResearchBrief
+
+        brief = session.scalars(
+            select(ResearchBrief).where(
+                ResearchBrief.opportunity_id == application.opportunity_id
+            )
+        ).first()
+        if brief is not None:
+            research = {
+                "summary": brief.summary,
+                "facts": brief.facts,
+                "fit_points": brief.fit_points,
+                "provider": brief.provider,
+                "confidence": brief.confidence,
+            }
     return ApplicationOut(
         id=application.id,
         company_name=company.name if company else "",
@@ -80,10 +104,19 @@ def _to_out(session, application: Application, *, with_candidates: bool) -> Appl
         status=application.status,
         pipeline_stage=application.pipeline_stage,
         email_to=application.email_to,
+        email_source=application.email_source,
+        email_label=application.email_label,
+        email_confidence=application.email_confidence,
+        contact_rationale=application.contact_rationale,
         subject=application.subject,
         body=application.body,
         review_reasons=application.review_reasons,
         outcome=application.outcome,
+        reply_preview=application.reply_preview,
+        personalization_plan=application.personalization_plan
+        if with_candidates
+        else {},
+        research=research,
         candidates=candidates,
     )
 
@@ -135,6 +168,63 @@ def get_application(application_id: str, user: CurrentUser, session: DbSession) 
     if application is None or application.user_id != user.id:
         raise HTTPException(status_code=404, detail="application not found")
     return _to_out(session, application, with_candidates=True)
+
+
+class ApplicationEdit(BaseModel):
+    subject: str | None = None
+    body: str | None = None
+
+
+def _owned(application_id: str, user, session) -> Application:
+    application = session.get(Application, application_id)
+    if application is None or application.user_id != user.id:
+        raise HTTPException(status_code=404, detail="application not found")
+    return application
+
+
+@router.patch("/{application_id}")
+def edit_application(
+    application_id: str, payload: ApplicationEdit, user: CurrentUser, session: DbSession
+) -> ApplicationOut:
+    application = _owned(application_id, user, session)
+    if application.status in {"sent", "replied", "positive_reply"}:
+        raise HTTPException(status_code=409, detail="already sent")
+    if payload.subject is not None:
+        application.subject = payload.subject
+    if payload.body is not None:
+        application.body = payload.body
+    session.commit()
+    return _to_out(session, application, with_candidates=False)
+
+
+@router.post("/{application_id}/approve")
+def approve_application(
+    application_id: str, payload: ApplicationEdit, user: CurrentUser, session: DbSession
+) -> dict:
+    from jobapp.services.sending import SendBlocked, approve
+
+    application = _owned(application_id, user, session)
+    try:
+        approve(session, application, subject=payload.subject, body=payload.body)
+    except SendBlocked as exc:
+        raise HTTPException(status_code=409, detail=exc.reason)
+    session.commit()
+    return {"status": application.status, "approved_at": str(application.approved_at)}
+
+
+@router.post("/{application_id}/send")
+def send_application(
+    application_id: str, user: CurrentUser, session: DbSession
+) -> dict:
+    from jobapp.services.sending import SendBlocked, send
+
+    application = _owned(application_id, user, session)
+    try:
+        send(session, application, user)
+    except SendBlocked as exc:
+        raise HTTPException(status_code=409, detail=exc.reason)
+    session.commit()
+    return {"status": application.status, "message_id": application.message_id}
 
 
 @router.get("/{application_id}/status")

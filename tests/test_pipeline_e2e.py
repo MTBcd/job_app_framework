@@ -64,14 +64,14 @@ def test_create_prepare_review_flow(client):
     )
     assert response.status_code == 201
     application_id = response.json()["id"]
-    assert response.json()["status"] == "processing"
+    assert response.json()["status"] == "researching"
 
     # Worker runs the V0 engine
     _drain_jobs()
 
     # Review-ready pack with real inference results
     pack = client.get(f"/applications/{application_id}", headers=HEADERS).json()
-    assert pack["status"] == "needs_review"
+    assert pack["status"] == "ready_for_review"
     assert pack["pipeline_stage"] == "done"
     # Curated V0 override: Goldman Sachs → gs.com; top pattern first.last
     assert pack["email_to"] == "john.smith@gs.com"
@@ -82,15 +82,17 @@ def test_create_prepare_review_flow(client):
     assert top["confidence"] >= 0.72  # trusted override domain → no review flag
     assert any("pattern=first.last" in reason for reason in top["reasoning"])
     assert "low_email_confidence" not in pack["review_reasons"]
-    # Honest non-AI fallback until the provider is configured
-    assert "ai_not_configured" in pack["review_reasons"]
-    assert "Goldman Sachs" in pack["subject"]
+    # Deterministic fake AI assembled the draft from inputs only
+    assert "Goldman Sachs" in pack["body"]
+    assert "Quantitative Analyst" in pack["subject"]
+    assert pack["email_source"] == "heuristic"
+    assert pack["email_label"] == "High-confidence inference"
 
     # Status endpoint
     status = client.get(
         f"/applications/{application_id}/status", headers=HEADERS
     ).json()
-    assert status == {"status": "needs_review", "pipeline_stage": "done"}
+    assert status == {"status": "ready_for_review", "pipeline_stage": "done"}
 
 
 def test_duplicate_company_rejected(client):

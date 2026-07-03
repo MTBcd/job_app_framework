@@ -7,6 +7,7 @@ from functools import lru_cache
 from sqlalchemy import create_engine
 from sqlalchemy.engine import Engine
 from sqlalchemy.orm import Session, sessionmaker
+from sqlalchemy.pool import NullPool
 
 from jobapp.settings import get_settings
 
@@ -14,12 +15,16 @@ from jobapp.settings import get_settings
 @lru_cache
 def get_engine() -> Engine:
     settings = get_settings()
-    connect_args = (
-        {"check_same_thread": False}
-        if settings.database_url.startswith("sqlite")
-        else {}
-    )
-    return create_engine(settings.database_url, connect_args=connect_args)
+    if settings.database_url.startswith("sqlite"):
+        # NullPool: a fresh connection per session avoids pooled-connection
+        # file-lock interplay under the multi-threaded TestClient/worker mix.
+        # Postgres (production) keeps the default QueuePool.
+        return create_engine(
+            settings.database_url,
+            connect_args={"check_same_thread": False, "timeout": 15},
+            poolclass=NullPool,
+        )
+    return create_engine(settings.database_url, pool_pre_ping=True)
 
 
 @lru_cache

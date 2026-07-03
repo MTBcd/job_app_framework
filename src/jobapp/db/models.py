@@ -136,24 +136,40 @@ class Application(TimestampMixin, Base):
 
     STATUSES = (
         "draft",
-        "needs_review",
+        "researching",
+        "ready_for_review",
         "approved",
         "sent",
         "replied",
+        "positive_reply",
+        "interview",
+        "rejected",
+        "no_response",
         "bounced",
         "failed",
         "suppressed",
+        "archived",
     )
 
     id: Mapped[str] = mapped_column(String(36), primary_key=True, default=_uuid)
     user_id: Mapped[str] = mapped_column(ForeignKey("users.id"), index=True)
     company_id: Mapped[str] = mapped_column(ForeignKey("companies.id"), index=True)
     contact_id: Mapped[str | None] = mapped_column(ForeignKey("contacts.id"))
-    job_posting_id: Mapped[str | None] = mapped_column(ForeignKey("job_postings.id"))
+    opportunity_id: Mapped[str | None] = mapped_column(ForeignKey("opportunities.id"))
     status: Mapped[str] = mapped_column(String(20), default="draft", index=True)
     pipeline_stage: Mapped[str] = mapped_column(String(30), default="")
     tone: Mapped[str] = mapped_column(String(20), default="direct")
     optimized_cv: Mapped[str | None] = mapped_column(Text)
+    contact_rationale: Mapped[str] = mapped_column(Text, default="")
+    personalization_plan: Mapped[dict] = mapped_column(JSON, default=dict)
+    email_source: Mapped[str] = mapped_column(String(30), default="")
+    email_pattern: Mapped[str] = mapped_column(String(30), default="")
+    email_label: Mapped[str] = mapped_column(String(40), default="")
+    email_confidence: Mapped[float] = mapped_column(Float, default=0.0)
+    approved_subject: Mapped[str | None] = mapped_column(String(500))
+    approved_body: Mapped[str | None] = mapped_column(Text)
+    approved_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    reply_preview: Mapped[str] = mapped_column(Text, default="")
     outcome: Mapped[str] = mapped_column(String(20), default="pending")
     outcome_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     follow_up_count: Mapped[int] = mapped_column(Integer, default=0)
@@ -176,16 +192,39 @@ class Application(TimestampMixin, Base):
     )
 
 
-class JobPosting(TimestampMixin, Base):
-    __tablename__ = "job_postings"
+class Opportunity(TimestampMixin, Base):
+    """A target: company-only spontaneous applications are first-class —
+    every field except the company is optional."""
+
+    __tablename__ = "opportunities"
 
     id: Mapped[str] = mapped_column(String(36), primary_key=True, default=_uuid)
     user_id: Mapped[str] = mapped_column(ForeignKey("users.id"), index=True)
-    company_id: Mapped[str | None] = mapped_column(ForeignKey("companies.id"))
+    company_id: Mapped[str] = mapped_column(ForeignKey("companies.id"), index=True)
     title: Mapped[str] = mapped_column(String(255), default="")
     description_text: Mapped[str] = mapped_column(Text, default="")
     url: Mapped[str] = mapped_column(String(1000), default="")
-    source: Mapped[str] = mapped_column(String(20), default="pasted")
+    location: Mapped[str] = mapped_column(String(255), default="")
+    notes: Mapped[str] = mapped_column(Text, default="")
+    source: Mapped[str] = mapped_column(String(20), default="manual")
+
+
+class ResearchBrief(TimestampMixin, Base):
+    """Per-opportunity research with per-fact provenance (source, url,
+    retrieved_at, confidence). Facts are never invented; when the provider
+    cannot establish a fact it is simply absent."""
+
+    __tablename__ = "research_briefs"
+
+    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=_uuid)
+    opportunity_id: Mapped[str] = mapped_column(
+        ForeignKey("opportunities.id"), unique=True
+    )
+    summary: Mapped[dict] = mapped_column(JSON, default=dict)
+    facts: Mapped[list] = mapped_column(JSON, default=list)
+    fit_points: Mapped[list] = mapped_column(JSON, default=list)
+    provider: Mapped[str] = mapped_column(String(30), default="none")
+    confidence: Mapped[float] = mapped_column(Float, default=0.0)
 
 
 class MatchReport(TimestampMixin, Base):

@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 
 from jobapp.cleaning import company_display_name, normalize_company_name
 from jobapp.contacts import parse_full_name
-from jobapp.db.models import Application, Company, Contact, JobPosting, User
+from jobapp.db.models import Application, Company, Contact, Opportunity, User
 from jobapp.services import queue
 
 FREE_PLAN_APPLICATION_CAP = 3
@@ -48,6 +48,8 @@ def create_application(
     role: str = "",
     jd_text: str = "",
     jd_url: str = "",
+    location: str = "",
+    notes: str = "",
     contact_name: str = "",
     contact_title: str = "",
     tone: str = "",
@@ -73,41 +75,54 @@ def create_application(
     if existing is not None and (role or "") == "":
         raise DuplicateApplication(existing.id)
 
-    job_posting = None
-    if jd_text or jd_url:
-        job_posting = JobPosting(
-            user_id=user.id,
-            company_id=company.id,
-            title=role,
-            description_text=jd_text,
-            url=jd_url,
-            source="url" if jd_url and not jd_text else "pasted",
-        )
-        session.add(job_posting)
-        session.flush()
+    # Company-only spontaneous applications are first-class: the opportunity
+    # row always exists, its JD/url/title fields may all be empty.
+    opportunity = Opportunity(
+        user_id=user.id,
+        company_id=company.id,
+        title=role,
+        description_text=jd_text,
+        url=jd_url,
+        location=location,
+        notes=notes,
+        source="url" if jd_url and not jd_text else "manual",
+    )
+    session.add(opportunity)
+    session.flush()
 
     contact = None
     if contact_name:
         parsed = parse_full_name(contact_name)
-        contact = Contact(
-            user_id=user.id,
-            company_id=company.id,
-            first_name=parsed["first_name"],
-            last_name=parsed["last_name"],
-            full_name=parsed["full_name_clean"],
-            title=contact_title,
-            source="manual",
-            name_parse_warning=parsed["name_parse_warning"],
-        )
-        session.add(contact)
-        session.flush()
+        # One person = one contact row per company (V0 audit lesson: identity
+        # collapse/duplication corrupts dedupe and learning).
+        contact = session.scalars(
+            select(Contact).where(
+                Contact.user_id == user.id,
+                Contact.company_id == company.id,
+                Contact.first_name == parsed["first_name"],
+                Contact.last_name == parsed["last_name"],
+            )
+        ).first()
+        if contact is None:
+            contact = Contact(
+                user_id=user.id,
+                company_id=company.id,
+                first_name=parsed["first_name"],
+                last_name=parsed["last_name"],
+                full_name=parsed["full_name_clean"],
+                title=contact_title,
+                source="manual",
+                name_parse_warning=parsed["name_parse_warning"],
+            )
+            session.add(contact)
+            session.flush()
 
     application = Application(
         user_id=user.id,
         company_id=company.id,
         contact_id=contact.id if contact else None,
-        job_posting_id=job_posting.id if job_posting else None,
-        status="processing",
+        opportunity_id=opportunity.id,
+        status="researching",
         pipeline_stage="queued",
         tone=tone or user.tone_default,
     )
