@@ -101,35 +101,70 @@ class FakeAIProvider:
         profile = inputs.get("profile", {})
         research = inputs.get("research", {})
         contact = inputs.get("contact", {})
+        experience = (profile.get("work_experience") or [{}])[0]
+        highlights = experience.get("highlights") or []
         plan = {
-            "relevance": f"Candidate skills {profile.get('skills', [])[:3]} relate to "
-                         f"{inputs.get('company_name', '')}",
+            "candidate_strengths": [
+                {"point": skill, "evidence": "profile.skills"}
+                for skill in profile.get("skills", [])[:4]
+            ] + ([{"point": highlights[0], "evidence": "work_experience.highlights"}]
+                 if highlights else []),
+            "gaps_to_avoid_overclaiming": [],
+            "safe_facts": [
+                {"fact": fact["fact"], "source": fact.get("source", "")}
+                for fact in research.get("facts", [])
+            ][:2],
+            "excluded_facts": [],
+            "angle": f"grounded fit for {inputs.get('company_name', '')}",
+            "tone": inputs.get("tone", "direct"),
+            "recipient_reasoning": contact.get("rationale", ""),
+            "call_to_action": "short_intro_call",
+            "risks": [],
+            "writing_constraints": ["no invented facts", "no salary talk"],
+            # legacy keys kept for older tests/demo output
             "experiences_to_mention": profile.get("skills", [])[:2],
             "company_facts_to_use": [
                 fact["fact"] for fact in research.get("facts", [])
             ][:2],
             "contact_reason": contact.get("rationale", ""),
-            "call_to_action": "short_intro_call",
             "do_not_mention": ["salary", "unverified_company_claims"],
         }
         return plan, AiUsage(model="fake")
 
     def tailored_email(self, inputs: dict, plan: dict) -> tuple[dict, AiUsage]:
+        profile = inputs.get("profile", {})
         company = inputs.get("company_name", "")
         contact_name = inputs.get("contact", {}).get("first_name", "") or "there"
         title = inputs.get("opportunity_title", "")
         role_clause = f" regarding {title}" if title else ""
-        facts = plan.get("company_facts_to_use", [])
+        facts = plan.get("company_facts_to_use") or [
+            f["fact"] for f in plan.get("safe_facts", [])
+        ]
         fact_clause = f" I noted that {facts[0].rstrip('.')}." if facts else ""
-        skills = ", ".join(plan.get("experiences_to_mention", []))
+        skills = ", ".join(profile.get("skills", [])[:4])
+        experience = (profile.get("work_experience") or [{}])[0]
+        highlights = experience.get("highlights") or []
+        experience_clause = ""
+        if experience.get("title"):
+            experience_clause = (
+                f" As {experience['title']} at {experience.get('company', '')}"
+                + (f", I {highlights[0]}." if highlights else ".")
+            )
+        projects = profile.get("projects") or []
+        project_clause = f" Recently I also {projects[0]}." if projects else ""
         subject = f"{title or 'Introduction'} — {inputs.get('candidate_name', 'Candidate')}"
         body = (
             f"Hi {contact_name},\n\n"
             f"I'm reaching out{role_clause} at {company}.{fact_clause}\n"
-            f"My background covers {skills}.\n\n"
+            f"My background covers {skills}.{experience_clause}{project_clause}\n\n"
             f"Would you be open to a short call?\n"
         )
-        return {"subject": subject, "body": body}, AiUsage(model="fake")
+        claims = [{"claim": skill, "grounded_in": "profile.skills"}
+                  for skill in profile.get("skills", [])[:4]]
+        return (
+            {"subject": subject, "body": body, "claims_used": claims},
+            AiUsage(model="fake"),
+        )
 
 
 class FakeEmailProvider:

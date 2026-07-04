@@ -49,6 +49,13 @@ class AiUsage:
     tokens_in: int = 0
     tokens_out: int = 0
     cost_cents: float = 0.0
+    latency_ms: int = 0
+    prompt_version: str = ""
+
+
+class AiProviderError(Exception):
+    """Raised when a provider call fails after retries. Services catch this
+    and fall back — the app never dead-ends on a provider failure."""
 
 
 class AIProvider(Protocol):
@@ -95,10 +102,9 @@ def get_ai_provider() -> AIProvider:
     settings = get_settings()
     if not settings.anthropic_api_key:
         return FakeAIProvider()
-    raise NotImplementedError(
-        "Anthropic adapter lands in the next milestone; unset ANTHROPIC_API_KEY "
-        "to use the deterministic fake."
-    )
+    from jobapp.providers.anthropic_provider import AnthropicProvider
+
+    return AnthropicProvider()
 
 
 def get_email_provider() -> EmailProvider:

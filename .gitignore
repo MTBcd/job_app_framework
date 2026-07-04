@@ -25,6 +25,9 @@ htmlcov/
 *.db
 *.sqlite3
 
+# Eval outputs (regenerated per run)
+evals/last_run.json
+
 # Local data and logs (contact PII must never enter git)
 data/raw/
 data/processed/

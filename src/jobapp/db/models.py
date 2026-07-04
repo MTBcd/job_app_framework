@@ -352,6 +352,8 @@ class AiRun(TimestampMixin, Base):
     application_id: Mapped[str | None] = mapped_column(ForeignKey("applications.id"))
     kind: Mapped[str] = mapped_column(String(30))
     model: Mapped[str] = mapped_column(String(60), default="")
+    prompt_version: Mapped[str] = mapped_column(String(20), default="")
     tokens_in: Mapped[int] = mapped_column(Integer, default=0)
     tokens_out: Mapped[int] = mapped_column(Integer, default=0)
     cost_cents: Mapped[float] = mapped_column(Float, default=0.0)
+    latency_ms: Mapped[int] = mapped_column(Integer, default=0)

@@ -28,9 +28,10 @@ class AppSettings(BaseSettings):
     stripe_secret_key: str = ""
     stripe_webhook_secret: str = ""
 
-    # AI provider
+    # AI provider. Opus 4.8 default for the quality bar; switch to
+    # claude-sonnet-5 via AI_MODEL once evals confirm parity for our prompts.
     anthropic_api_key: str = ""
-    ai_model: str = "claude-sonnet-5"
+    ai_model: str = "claude-opus-4-8"
 
     # Symmetric key for encrypting user mailbox credentials at rest (Fernet).
     credentials_encryption_key: str = ""

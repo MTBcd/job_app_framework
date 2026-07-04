@@ -27,9 +27,11 @@ def _record_run(
             application_id=application.id,
             kind=kind,
             model=usage.model,
+            prompt_version=usage.prompt_version,
             tokens_in=usage.tokens_in,
             tokens_out=usage.tokens_out,
             cost_cents=usage.cost_cents,
+            latency_ms=usage.latency_ms,
         )
     )
 
@@ -68,12 +70,28 @@ def generate_application_content(
         "tone": application.tone,
     }
 
-    plan, plan_usage = ai.personalization_plan(inputs)
-    _record_run(session, application, "personalization_plan", plan_usage)
-    application.personalization_plan = plan
+    from jobapp.providers import AiProviderError
 
-    email, email_usage = ai.tailored_email(inputs, plan)
-    _record_run(session, application, "tailored_email", email_usage)
+    try:
+        plan, plan_usage = ai.personalization_plan(inputs)
+        _record_run(session, application, "personalization_plan", plan_usage)
+        application.personalization_plan = plan
+
+        email, email_usage = ai.tailored_email(inputs, plan)
+        _record_run(session, application, "tailored_email", email_usage)
+    except AiProviderError:
+        # Never dead-end on a provider failure: fall back to the
+        # deterministic fake and flag the application for review.
+        from jobapp.providers.fakes import FakeAIProvider
+
+        fake = FakeAIProvider()
+        plan, _ = fake.personalization_plan(inputs)
+        application.personalization_plan = plan
+        email, _ = fake.tailored_email(inputs, plan)
+        reasons = list(application.review_reasons or [])
+        if "ai_generation_failed" not in reasons:
+            application.review_reasons = reasons + ["ai_generation_failed"]
+
     application.subject = email["subject"]
     application.body = email["body"]
     session.flush()

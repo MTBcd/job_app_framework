@@ -88,7 +88,9 @@ def prepare_application(
         session, application, opportunity, company, contact, brief, ai_provider
     )
 
-    application.review_reasons = review_reasons
+    # Merge: generation may have appended its own reasons (e.g. fallback).
+    appended = [r for r in (application.review_reasons or []) if r not in review_reasons]
+    application.review_reasons = review_reasons + appended
     application.pipeline_stage = "done"
     application.status = "ready_for_review"
     session.flush()
