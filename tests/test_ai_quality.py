@@ -7,7 +7,7 @@ from types import SimpleNamespace
 
 import pytest
 
-from evals.checks import run_checks, score
+from evals.checks import claim_is_asserted, run_checks, score
 from evals.golden_set import SCENARIOS, scenario_inputs
 from jobapp.providers import AiProviderError
 from jobapp.providers.anthropic_provider import (
@@ -88,6 +88,37 @@ class TestFakeProviderMeetsEvalContract:
         email, _ = fake.tailored_email(inputs, plan)
         assert email["claims_used"]
         assert all(c["grounded_in"] for c in email["claims_used"])
+
+
+class TestNegationAwareProhibitedClaims:
+    CLAIM = "healthcare experience"
+
+    @pytest.mark.parametrize("body", [
+        "I don't have healthcare experience yet, but my retention work maps well.",
+        "I do not have direct healthcare experience.",
+        "My background is in retail rather than healthcare experience terms.",
+        "I have not worked in healthcare experience settings before.",
+        "While I haven't gained healthcare experience, my SQL work transfers.",
+        "I'm new to healthcare experience but not to experimentation.",
+    ])
+    def test_negated_contexts_do_not_fail(self, body):
+        assert claim_is_asserted(self.CLAIM, body.lower()) is False
+
+    @pytest.mark.parametrize("body", [
+        "I have healthcare experience across two hospital systems.",
+        "My healthcare experience makes this a natural fit.",
+        "Drawing on my experience, my healthcare experience is directly relevant.",
+        "I previously worked in healthcare. That healthcare experience shaped me.",
+        # conservative: bare "not" is not a negation marker
+        "Not only do I have healthcare experience, I have led teams with it.",
+        # negation in a PREVIOUS sentence must not excuse a later assertion
+        "I have not worked abroad. My healthcare experience is extensive.",
+        # negated once, asserted later in the same body -> still fails
+        "I don't have healthcare experience in the US. My healthcare experience "
+        "in Canada is deep.",
+    ])
+    def test_asserted_contexts_still_fail(self, body):
+        assert claim_is_asserted(self.CLAIM, body.lower()) is True
 
 
 def _stub_response(payload: dict, *, stop_reason="end_turn", tokens=(1200, 400)):
