@@ -152,7 +152,13 @@ class FakeAIProvider:
             )
         projects = profile.get("projects") or []
         project_clause = f" Recently I also {projects[0]}." if projects else ""
-        subject = f"{title or 'Introduction'} — {inputs.get('candidate_name', 'Candidate')}"
+        # p2 subject format: "<Role> application — <strength>" / "Introduction — <strength>"
+        top_strength = (profile.get("skills") or ["candidate"])[0]
+        subject = (
+            f"{title} application — {top_strength}"
+            if title
+            else f"Introduction — {top_strength}"
+        )
         body = (
             f"Hi {contact_name},\n\n"
             f"I'm reaching out{role_clause} at {company}.{fact_clause}\n"
