@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Profile — Job Copilot{% endblock %}
+{% block content %}
+<div class="card">
+  <h1>Candidate profile</h1>
+  <p class="muted">This is the only source the AI may draw candidate facts from — nothing you don't write here can appear in an email.</p>
+  <form method="post" action="/ui/profile">
+    <label>Full name</label>
+    <input name="full_name" required value="{{ p.full_name }}">
+    <label>Target role</label>
+    <input name="target_role" value="{{ p.target_role }}">
+    <label>Location</label>
+    <input name="location" value="{{ p.location }}">
+    <label>Headline / positioning (one sentence)</label>
+    <input name="headline" value="{{ p.headline }}">
+    <label>Experience summary</label>
+    <textarea name="experience_summary">{{ p.experience_summary }}</textarea>
+    <label>Key skills (comma-separated)</label>
+    <input name="skills" value="{{ p.skills }}">
+    <label>Proof points / projects (one per line)</label>
+    <textarea name="proof_points">{{ p.proof_points }}</textarea>
+    <label>Constraints or gaps (honest — the AI uses these to avoid overclaiming)</label>
+    <textarea name="constraints">{{ p.constraints }}</textarea>
+    <button>Save profile</button>
+  </form>
+</div>
+{% endblock %}

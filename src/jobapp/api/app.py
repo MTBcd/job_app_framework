@@ -8,6 +8,7 @@ from fastapi import FastAPI
 
 from jobapp.api.routes.applications import router as applications_router
 from jobapp.api.routes.cv import router as cv_router
+from jobapp.api.routes.ui import router as ui_router
 from jobapp.settings import get_settings
 
 
@@ -20,6 +21,7 @@ def create_app() -> FastAPI:
     )
     application.include_router(applications_router)
     application.include_router(cv_router)
+    application.include_router(ui_router)
 
     if settings.app_env == "local":
         # Dev convenience until Alembic lands with the managed Postgres.

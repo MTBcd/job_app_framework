@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+  <h1>Applications</h1>
+  {% if not has_profile %}
+    <p class="muted">Start by <a href="/ui/profile">creating your candidate profile</a>, then add an opportunity.</p>
+  {% elif not applications %}
+    <p class="muted">No applications yet — <a href="/ui/new">create your first opportunity</a>.</p>
+  {% endif %}
+  {% if applications %}
+  <table>
+    <tr><th>Company</th><th>Role</th><th>Status</th><th></th></tr>
+    {% for app in applications %}
+    <tr>
+      <td>{{ app.company_name }}</td>
+      <td>{{ app.role or "spontaneous" }}</td>
+      <td><span class="chip {{ 'ok' if app.status in ('sent', 'approved') else '' }}">{{ app.display_status }}</span></td>
+      <td><a href="/ui/applications/{{ app.id }}">open</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% endif %}
+</div>
+<div class="card">
+  <h2>Demo</h2>
+  <p class="muted">Seed a sample profile and opportunity, run the pipeline, and land on the review screen — no external services needed.</p>
+  <form method="post" action="/ui/demo"><button class="secondary">Run demo flow</button></form>
+</div>
+{% endblock %}

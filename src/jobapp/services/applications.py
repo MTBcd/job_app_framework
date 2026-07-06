@@ -52,7 +52,9 @@ def create_application(
     notes: str = "",
     contact_name: str = "",
     contact_title: str = "",
+    contact_email: str = "",
     tone: str = "",
+    enqueue: bool = True,
 ) -> Application:
     if user.plan == "free":
         count = len(
@@ -126,13 +128,23 @@ def create_application(
         pipeline_stage="queued",
         tone=tone or user.tone_default,
     )
+    # A user-provided address outranks inference (resolution order rule #1).
+    from jobapp.cleaning import is_valid_email
+
+    if contact_email and is_valid_email(contact_email):
+        application.email_to = contact_email.strip()
+        application.email_source = "provided"
+        application.email_pattern = "provided"
+        application.email_label = "Verified"
+        application.email_confidence = 1.0
     session.add(application)
     session.flush()
 
-    queue.enqueue(
-        session,
-        "prepare_application",
-        {"application_id": application.id},
-        user_id=user.id,
-    )
+    if enqueue:
+        queue.enqueue(
+            session,
+            "prepare_application",
+            {"application_id": application.id},
+            user_id=user.id,
+        )
     return application
