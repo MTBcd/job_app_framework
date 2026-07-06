@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}New application — Job Copilot{% endblock %}
+{% block content %}
+<div class="card">
+  <h1>New opportunity</h1>
+  <p class="muted">Company-only speculative applications are fine — every field except the company is optional.</p>
+  <form method="post" action="/ui/opportunity">
+    <label>Company name *</label>
+    <input name="company_name" required>
+    <label>Role title</label>
+    <input name="role" placeholder="leave empty for a spontaneous application">
+    <label>Job description / notes</label>
+    <textarea name="jd_text"></textarea>
+    <label>Company notes</label>
+    <textarea name="notes"></textarea>
+    <label>Contact name</label>
+    <input name="contact_name" placeholder="e.g. Jane Smith">
+    <label>Contact title</label>
+    <input name="contact_title" placeholder="e.g. Head of Data">
+    <label>Contact email (if you already know it)</label>
+    <input name="contact_email" placeholder="leave empty to infer">
+    <button>Generate application</button>
+  </form>
+</div>
+{% endblock %}

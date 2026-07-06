@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}Review — Job Copilot{% endblock %}
+{% block content %}
+
+{% if error %}<div class="banner">Action blocked: <strong>{{ error }}</strong></div>{% endif %}
+<div class="card">
+  <h1>{{ company_name }} {% if role %}· {{ role }}{% endif %}</h1>
+  <p>
+    <span class="chip {{ 'ok' if app.status in ('sent', 'approved') else '' }}">{{ display_status }}</span>
+    {% for reason in app.review_reasons %}<span class="chip warn">{{ reason }}</span>{% endfor %}
+  </p>
+
+  {% if app.status in ('sent',) %}
+    <h2>Sent (simulated) — exact approved content</h2>
+    <p class="muted">message id: {{ app.message_id }} · approved at {{ app.approved_at }}</p>
+    <p><strong>To:</strong> {{ app.email_to }}<br><strong>Subject:</strong> {{ app.approved_subject }}</p>
+    <pre>{{ app.approved_body }}</pre>
+  {% elif app.status == 'approved' %}
+    <h2>Approved — frozen snapshot</h2>
+    <p class="muted">Editing below no longer changes what will be sent. Approved at {{ app.approved_at }}.</p>
+    <p><strong>Subject:</strong> {{ app.approved_subject }}</p>
+    <pre>{{ app.approved_body }}</pre>
+    <form method="post" action="/ui/applications/{{ app.id }}/send">
+      <button>Simulate send</button>
+    </form>
+  {% else %}
+    <form method="post" action="/ui/applications/{{ app.id }}/save">
+      <label>Subject</label>
+      <input name="subject" value="{{ app.subject }}">
+      <label>Body</label>
+      <textarea name="body" style="min-height:220px">{{ app.body }}</textarea>
+      <button class="secondary">Save edits</button>
+    </form>
+    <form method="post" action="/ui/applications/{{ app.id }}/approve">
+      <button class="approve">Approve (freeze exact content)</button>
+    </form>
+  {% endif %}
+</div>
+
+<div class="card">
+  <h2>Recipient</h2>
+  {% if app.email_to %}
+    <p>{{ contact_name }}{% if contact_title %} — {{ contact_title }}{% endif %}<br>
+      <strong>{{ app.email_to }}</strong>
+      <span class="chip {{ 'ok' if app.email_label == 'Verified' else 'warn' if 'Low' in app.email_label or 'Manual' in app.email_label else '' }}">{{ app.email_label }}</span>
+      {% if app.email_confidence %}<span class="muted">confidence {{ '%.0f' % (app.email_confidence * 100) }}% · {{ app.email_source }} · {{ app.email_pattern }}</span>{% endif %}
+    </p>
+  {% else %}
+    <p class="chip warn">No address — add a contact or their email on the opportunity.</p>
+  {% endif %}
+  {% if app.contact_rationale %}<p class="muted">{{ app.contact_rationale }}</p>{% endif %}
+</div>
+
+<div class="card">
+  <h2>Context the draft is grounded in</h2>
+  {% if research %}
+    <p class="muted">Research (provider: {{ research.provider }}, confidence {{ research.confidence }})</p>
+    <ul>{% for fact in research.facts %}<li>{{ fact.fact }} <span class="muted">[{{ fact.source }}]</span></li>{% endfor %}</ul>
+  {% else %}<p class="muted">No research brief.</p>{% endif %}
+  {% if strengths %}
+    <p class="muted">Candidate proof points used</p>
+    <ul>{% for s in strengths %}<li>{{ s.point }} <span class="muted">[{{ s.evidence }}]</span></li>{% endfor %}</ul>
+  {% endif %}
+  {% if gaps %}
+    <p class="muted">Gaps the draft avoids overclaiming</p>
+    <ul>{% for g in gaps %}<li>{{ g }}</li>{% endfor %}</ul>
+  {% endif %}
+</div>
+
+<p><a href="/ui">← all applications</a></p>
+{% endblock %}

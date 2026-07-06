@@ -1,4 +1,37 @@
-# Local spontaneous job application workflow
+# Job Application Copilot
+
+## Run the beta app locally (Minimal Review UI)
+
+```bash
+python3 -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
+pip install -e ".[dev]"
+PYTHONPATH=src APP_ENV=local uvicorn jobapp.api.app:app --reload
+```
+
+Open **http://127.0.0.1:8000/ui** — then either click **“Run demo flow”**
+(seeds a sample profile + opportunity and lands on the review screen, no
+external services needed) or walk the real journey: **Profile → New
+application → Review → edit → Approve → Simulate send**.
+
+Notes:
+
+- Without `ANTHROPIC_API_KEY` the app uses the deterministic fake AI provider
+  (a banner says so). `export ANTHROPIC_API_KEY=sk-ant-...` before starting
+  for real drafts (model via `AI_MODEL`, default `claude-opus-4-8`).
+- Sending is **simulated** in this milestone — the fake transport records the
+  exact approved content; nothing leaves your machine. Approval freezes an
+  immutable snapshot; later edits never change what is "sent".
+- Data lives in a local `jobapp.db` SQLite file (gitignored).
+- Tests: `pytest` · Lint: `ruff check src tests scripts evals`
+- AI quality eval: see `docs/eval.md` · API reference: `docs/api.md`
+
+---
+
+# V0 archive: local spontaneous job application workflow
+
+> Everything below documents the original V0 CLI prototype, kept for
+> reference while its logic is ported. The product entry point is the app
+> above.
 
 This project is a local, modular Python framework for preparing and sending spontaneous job applications safely and systematically.
 

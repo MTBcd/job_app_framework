@@ -67,13 +67,16 @@ def prepare_application(
         application.contact_id = contact.id
         application.contact_rationale = selected.rationale
 
-    # 4. Email resolution (explicit precedence over the V0 engine)
+    # 4. Email resolution (explicit precedence over the V0 engine).
+    # A user-provided address (source="provided") is precedence #1: keep it.
     application.pipeline_stage = "resolving_email"
     if contact is None and application.contact_id is not None:
         from jobapp.db.models import Contact
 
         contact = session.get(Contact, application.contact_id)
-    if contact is not None:
+    if application.email_source == "provided" and application.email_to:
+        pass
+    elif contact is not None:
         resolved = resolve_email(session, contact, company)
         application.email_to = resolved.email
         application.email_source = resolved.source
