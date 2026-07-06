@@ -23,6 +23,45 @@ CTA_MARKERS = ("call", "chat", "meet", "connect", "conversation", "speak",
 SALESY_MARKERS = ("!", "exciting", "amazing", "incredible", "revolutionary",
                   "rockstar", "game-chang", "cutting-edge", "world-class")
 
+# Explicit negated-possession/experience phrases. Deliberately multi-word and
+# specific — a bare "not" would excuse real assertions ("not only do I have
+# healthcare experience"). Conservative rule: no marker found → still flag.
+NEGATION_MARKERS = (
+    "don't have", "do not have", "don't yet have", "do not yet have",
+    "haven't", "have not", "hasn't", "has not",
+    "never worked", "not yet worked", "yet to work",
+    "no direct", "no prior", "no previous", "no formal",
+    "without prior", "without direct", "without formal",
+    "rather than", "instead of", "lack of", "lacking",
+    "new to", "transitioning into", "transitioning from", "moving into",
+)
+
+_SENTENCE_BOUNDARIES = ".!?\n"
+_LOOKBACK_CHARS = 60
+
+
+def _negated_at(body_lower: str, index: int) -> bool:
+    """True when a negation marker appears shortly before `index`, within the
+    same sentence (so a negation in a previous sentence never excuses)."""
+    window_start = max(index - _LOOKBACK_CHARS, 0)
+    for boundary in _SENTENCE_BOUNDARIES:
+        pos = body_lower.rfind(boundary, 0, index)
+        if pos + 1 > window_start:
+            window_start = pos + 1
+    window = body_lower[window_start:index]
+    return any(marker in window for marker in NEGATION_MARKERS)
+
+
+def claim_is_asserted(claim_lower: str, body_lower: str) -> bool:
+    """True if the claim appears anywhere in a non-negated context. A body
+    that negates the claim once but asserts it elsewhere still fails."""
+    start = 0
+    while (index := body_lower.find(claim_lower, start)) != -1:
+        if not _negated_at(body_lower, index):
+            return True
+        start = index + 1
+    return False
+
 
 @dataclass
 class CheckResult:
@@ -55,7 +94,10 @@ def run_checks(
     results.append(CheckResult(
         "no_forbidden_phrases", not hits, "; ".join(hits)))
 
-    prohibited = [c for c in scenario["prohibited_claims"] if c.lower() in body_lower]
+    prohibited = [
+        c for c in scenario["prohibited_claims"]
+        if claim_is_asserted(c.lower(), body_lower)
+    ]
     results.append(CheckResult(
         "no_prohibited_claims", not prohibited, "; ".join(prohibited)))
 
