@@ -20,6 +20,9 @@ GENERIC_SUBJECTS = {
 CTA_MARKERS = ("call", "chat", "meet", "connect", "conversation", "speak",
                "talk", "reply", "happy to share", "?")
 
+SALESY_MARKERS = ("!", "exciting", "amazing", "incredible", "revolutionary",
+                  "rockstar", "game-chang", "cutting-edge", "world-class")
+
 
 @dataclass
 class CheckResult:
@@ -60,12 +63,22 @@ def run_checks(
     results.append(CheckResult(
         "required_terms_present", not missing, f"missing: {missing}" if missing else ""))
 
+    # The exact official company name must appear in the body — pronouns or
+    # shortened possessives don't count as naming the company (p2 rule).
+    company = scenario["opportunity"]["company"]
+    results.append(CheckResult(
+        "company_name_in_body", company.lower() in body_lower, company))
+
     results.append(CheckResult(
         "subject_not_generic",
         bool(subject.strip())
         and subject_lower not in GENERIC_SUBJECTS
         and len(subject) <= 90,
         subject))
+
+    salesy = [m for m in SALESY_MARKERS if m in subject_lower]
+    results.append(CheckResult(
+        "subject_not_salesy", not salesy, "; ".join(salesy)))
 
     results.append(CheckResult(
         "cta_present", any(marker in body_lower for marker in CTA_MARKERS)))

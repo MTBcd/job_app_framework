@@ -41,6 +41,18 @@ class TestPromptContracts:
         assert "i hope this email finds you well" in EMAIL_SYSTEM.lower()
         assert "120-180 words" in EMAIL_SYSTEM
 
+    def test_p2_rules_present(self):
+        # Company must be named exactly, once, in the body
+        assert "EXACT official name" in EMAIL_SYSTEM
+        assert "shortened" in EMAIL_SYSTEM and "possessive" in EMAIL_SYSTEM
+        # Career-changer identity rule
+        assert "previous professional" in EMAIL_SYSTEM
+        assert "never as an apology" in EMAIL_SYSTEM
+        # Subject format rule
+        assert "application — " in EMAIL_SYSTEM
+        assert "Introduction — " in EMAIL_SYSTEM
+        assert "never salesy" in EMAIL_SYSTEM
+
     def test_schemas_are_strict(self):
         for schema in (PLAN_SCHEMA, EMAIL_SCHEMA):
             assert schema["additionalProperties"] is False

@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import json
 
-PROMPT_VERSION = "p1"
+PROMPT_VERSION = "p2"
 
 # Phrases that mark templated/AI-sounding outreach. The eval checks these;
 # the prompts forbid them explicitly.
@@ -133,12 +133,25 @@ Writing rules:
 - Open with the concrete reason for reaching out (1 sentence, no throat-
   clearing). Connect 1-2 candidate strengths to the opportunity using the
   plan's evidence. Close with the plan's single call to action.
+- Company naming (required): write the company's EXACT official name from
+  the INPUT JSON (company_name) at least once in the body, naturally —
+  usually in the opening sentence. "your team", "the company", or shortened
+  possessives ("Northwind's") do NOT satisfy this; use the full name once,
+  then pronouns are fine afterwards.
+- Career changers: when the candidate's background is a different profession
+  (e.g. teacher moving into UX research), name that previous professional
+  identity once, framed as a concrete asset for THIS role ("six years as a
+  teacher running structured feedback sessions") — never as an apology, and
+  never disguised.
 - Sound like a competent human wrote it: plain sentences, specific nouns,
   zero filler. Adapt formality to the plan's tone and the candidate's
   seniority (a junior sounds eager-but-grounded, a senior sounds peer-level).
 - NEVER use these phrases or close variants: {", ".join(FORBIDDEN_PHRASES)}.
-- Subject: specific and short (<= 70 chars); name the role or the angle and
-  the candidate's edge; never generic ("Job application", "Opportunity").
+- Subject format (<= 70 chars, plain, never salesy, no exclamation marks):
+  with a role: "<Role> application — <candidate's concrete strength>";
+  speculative/company-only: "Introduction — <strength or target area>".
+  Example: "Junior Backend Engineer application — Python/Postgres intern
+  with shipped dashboard". Never generic ("Job application", "Opportunity").
 - claims_used: list every specific claim in the email with the input field
   that grounds it — if you cannot ground a claim, do not write it."""
 
