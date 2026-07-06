@@ -1,0 +1,43 @@
+# Secrets — never track environment files (use .env.example as the template)
+.env
+.env.*
+!.env.example
+
+# Virtual environments
+.venv/
+.venv*/
+venv/
+env/
+
+# Python build/cache artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local databases
+*.db
+*.sqlite3
+
+# Eval outputs (regenerated per run)
+evals/last_run.json
+
+# Local data and logs (contact PII must never enter git)
+data/raw/
+data/processed/
+logs/
+/*.csv
+/*.xlsx
+/*.xls
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
